@@ -162,8 +162,7 @@ name = "adal"
 version = "1.2.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pyjwt" },
     { name = "python-dateutil" },
     { name = "requests" },
@@ -279,7 +278,7 @@ wheels = [
 
 [[package]]
 name = "aiobotocore"
-version = "2.26.0"
+version = "3.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -288,16 +287,12 @@ dependencies = [
     { name = "jmespath" },
     { name = "multidict" },
     { name = "python-dateutil" },
+    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4d/f8/99fa90d9c25b78292899fd4946fce97b6353838b5ecc139ad8ba1436e70c/aiobotocore-2.26.0.tar.gz", hash = "sha256:50567feaf8dfe2b653570b4491f5bc8c6e7fb9622479d66442462c021db4fadc", size = 122026, upload-time = "2025-11-28T07:54:59.956Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/71/9f/a0568deaf008f4a7e3d57a7f80f1537df894df0e49bd4a790bb22f9a2d8e/aiobotocore-3.3.0.tar.gz", hash = "sha256:9abc21d91edd6c9c2e4a07e11bdfcbb159f0b9116ab2a0a5a349113533a18fb2", size = 122940, upload-time = "2026-03-18T09:58:49.077Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b7/58/3bf0b7d474607dc7fd67dd1365c4e0f392c8177eaf4054e5ddee3ebd53b5/aiobotocore-2.26.0-py3-none-any.whl", hash = "sha256:a793db51c07930513b74ea7a95bd79aaa42f545bdb0f011779646eafa216abec", size = 87333, upload-time = "2025-11-28T07:54:58.457Z" },
-]
-
-[package.optional-dependencies]
-boto3 = [
-    { name = "boto3" },
+    { url = "https://files.pythonhosted.org/packages/16/54/a295bd8d7ac900c339b2c7024ed0ff9538afb60e92eb0979b8bb49deb20e/aiobotocore-3.3.0-py3-none-any.whl", hash = "sha256:9125ab2b63740dfe3b66b8d5a90d13aed9587b850aa53225ef214a04a1aa7fdc", size = 87817, upload-time = "2026-03-18T09:58:47.466Z" },
 ]
 
 [[package]]
@@ -600,7 +595,7 @@ resolution-markers = [
     "python_full_version == '3.12.*'",
 ]
 dependencies = [
-    { name = "alibabacloud-tea-openapi", version = "0.4.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "alibabacloud-tea-openapi", version = "0.4.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
     { name = "darabonba-core", marker = "python_full_version >= '3.12'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1f/94/6e7ea4ccea9b6d09d65746bd3a1170957fc4f3b5aecf6cf7f81a65888c35/alibabacloud_adb20211201-3.7.1.tar.gz", hash = "sha256:8e3c66440510065382f51d9b4bed24c3fa6415de6a8a0132eb8492a046a9b88b", size = 295517, upload-time = "2026-01-06T18:41:22.685Z" }
@@ -650,7 +645,7 @@ version = "0.2.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "alibabacloud-tea-util", marker = "python_full_version < '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography", marker = "python_full_version < '3.12'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f6/51/be5802851a4ed20ac2c6db50ac8354a6e431e93db6e714ca39b50983626f/alibabacloud_openapi_util-0.2.4.tar.gz", hash = "sha256:87022b9dcb7593a601f7a40ca698227ac3ccb776b58cb7b06b8dc7f510995c34", size = 7981, upload-time = "2026-01-15T08:05:03.947Z" }
 wheels = [
@@ -686,7 +681,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/09/be/f594e79625e5ccfcf
 
 [[package]]
 name = "alibabacloud-tea-openapi"
-version = "0.4.3"
+version = "0.4.4"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version >= '3.15' and sys_platform == 'win32'",
@@ -701,12 +696,12 @@ dependencies = [
     { name = "alibabacloud-credentials", marker = "python_full_version >= '3.12'" },
     { name = "alibabacloud-gateway-spi", marker = "python_full_version >= '3.12'" },
     { name = "alibabacloud-tea-util", marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "cryptography", marker = "python_full_version >= '3.12'" },
     { name = "darabonba-core", marker = "python_full_version >= '3.12'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/91/4f/b5288eea8f4d4b032c9a8f2cd1d926d5017977d10b874956f31e5343f299/alibabacloud_tea_openapi-0.4.3.tar.gz", hash = "sha256:12aef036ed993637b6f141abbd1de9d6199d5516f4a901588bb65d6a3768d41b", size = 21864, upload-time = "2026-01-15T07:55:16.744Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/30/93/138bcdc8fc596add73e37cf2073798f285284d1240bda9ee02f9384fc6be/alibabacloud_tea_openapi-0.4.4.tar.gz", hash = "sha256:1b0917bc03cd49417da64945e92731716d53e2eb8707b235f54e45b7473221ce", size = 21960, upload-time = "2026-03-26T10:16:16.792Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a5/37/48ee5468ecad19c6d44cf3b9629d77078e836ee3ec760f0366247f307b7c/alibabacloud_tea_openapi-0.4.3-py3-none-any.whl", hash = "sha256:d0b3a373b760ef6278b25fc128c73284301e07888977bf97519e7636d47bdf0a", size = 26159, upload-time = "2026-01-15T07:55:15.72Z" },
+    { url = "https://files.pythonhosted.org/packages/f5/5a/6bfc4506438c1809c486f66217ad11eab78157192b3d5707b4e2f4212f6c/alibabacloud_tea_openapi-0.4.4-py3-none-any.whl", hash = "sha256:cea6bc1fe35b0319a8752cb99eb0ecb0dab7ca1a71b99c12970ba0867410995f", size = 26236, upload-time = "2026-03-26T10:16:15.861Z" },
 ]
 
 [[package]]
@@ -735,8 +730,7 @@ name = "aliyun-python-sdk-core"
 version = "2.16.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "jmespath" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/3e/09/da9f58eb38b4fdb97ba6523274fbf445ef6a06be64b433693da8307b4bec/aliyun-python-sdk-core-2.16.0.tar.gz", hash = "sha256:651caad597eb39d4fad6cf85133dffe92837d53bdf62db9d8f37dab6508bb8f9", size = 449555, upload-time = "2024-10-09T06:01:01.762Z" }
@@ -1692,8 +1686,7 @@ dependencies = [
     { name = "colorlog" },
     { name = "cron-descriptor" },
     { name = "croniter" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "deprecated" },
     { name = "dill" },
     { name = "fastapi", extra = ["standard-no-fastapi-cloud-cli"] },
@@ -2581,7 +2574,7 @@ dependencies = [
     { name = "alibabacloud-adb20211201", version = "3.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "alibabacloud-adb20211201", version = "3.7.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
     { name = "alibabacloud-tea-openapi", version = "0.3.16", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
-    { name = "alibabacloud-tea-openapi", version = "0.4.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "alibabacloud-tea-openapi", version = "0.4.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
     { name = "apache-airflow" },
     { name = "apache-airflow-providers-common-compat" },
     { name = "oss2" },
@@ -2642,7 +2635,7 @@ dependencies = [
 
 [package.optional-dependencies]
 aiobotocore = [
-    { name = "aiobotocore", extra = ["boto3"] },
+    { name = "aiobotocore" },
 ]
 apache-hive = [
     { name = "apache-airflow-providers-apache-hive" },
@@ -2961,8 +2954,7 @@ dependencies = [
     { name = "apache-airflow" },
     { name = "apache-airflow-providers-cncf-kubernetes" },
     { name = "apache-airflow-providers-common-compat" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
 ]
 
 [package.dev-dependencies]
@@ -3456,7 +3448,8 @@ source = { editable = "providers/apache/spark" }
 dependencies = [
     { name = "apache-airflow" },
     { name = "apache-airflow-providers-common-compat" },
-    { name = "grpcio-status" },
+    { name = "grpcio-status", version = "1.71.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "grpcio-status", version = "1.78.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "pyspark-client" },
 ]
 
@@ -3792,8 +3785,7 @@ dependencies = [
     { name = "apache-airflow" },
     { name = "apache-airflow-providers-common-compat" },
     { name = "asgiref" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "kubernetes" },
     { name = "kubernetes-asyncio" },
     { name = "urllib3" },
@@ -7525,7 +7517,8 @@ dependencies = [
     { name = "apache-airflow-providers-common-compat" },
     { name = "grpcio" },
     { name = "yandex-query-client" },
-    { name = "yandexcloud" },
+    { name = "yandexcloud", version = "0.382.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "yandexcloud", version = "0.383.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 
 [package.dev-dependencies]
@@ -8462,8 +8455,7 @@ name = "asyncssh"
 version = "2.22.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/fc/d5/957886c316466349d55c4de6a688a10a98295c0b4429deb8db1a17f3eb19/asyncssh-2.22.0.tar.gz", hash = "sha256:c3ce72b01be4f97b40e62844dd384227e5ff5a401a3793007c42f86a5c8eb537", size = 540523, upload-time = "2025-12-21T23:38:30.5Z" }
@@ -8514,8 +8506,7 @@ name = "authlib"
 version = "1.6.9"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/af/98/00d3dd826d46959ad8e32af2dbb2398868fd9fd0683c26e56d0789bd0e68/authlib-1.6.9.tar.gz", hash = "sha256:d8f2421e7e5980cc1ddb4e32d3f5fa659cfaf60d8eaf3281ebed192e4ab74f04", size = 165134, upload-time = "2026-03-02T07:44:01.998Z" }
 wheels = [
@@ -8623,8 +8614,7 @@ version = "1.25.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "azure-core" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "msal" },
     { name = "msal-extensions" },
     { name = "typing-extensions" },
@@ -8843,8 +8833,7 @@ version = "12.28.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "azure-core" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "isodate" },
     { name = "typing-extensions" },
 ]
@@ -8879,8 +8868,7 @@ version = "12.24.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "azure-core" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "isodate" },
     { name = "typing-extensions" },
 ]
@@ -9318,30 +9306,30 @@ wheels = [
 
 [[package]]
 name = "boto3"
-version = "1.41.5"
+version = "1.42.70"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "botocore" },
     { name = "jmespath" },
     { name = "s3transfer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/5b/81/450cd4143864959264a3d80f9246175a20de8c1e50ec889c710eaa28cdd9/boto3-1.41.5.tar.gz", hash = "sha256:bc7806bee681dfdff2fe2b74967b107a56274f1e66ebe4d20dc8eee1ea408d17", size = 111594, upload-time = "2025-11-26T20:27:47.021Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/04/7c/d7a533916d1afc9e17f8594203a85799d42f7c5751464fbdb25ead8db9d2/boto3-1.42.70.tar.gz", hash = "sha256:d060b0d83d2832e403671b9a895e73c3b025df8bb5896d89e401b0678705aac4", size = 112808, upload-time = "2026-03-17T19:43:22.445Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3c/56/f47a80254ed4991cce9a2f6d8ae8aafbc8df1c3270e966b2927289e5a12f/boto3-1.41.5-py3-none-any.whl", hash = "sha256:bb278111bfb4c33dca8342bda49c9db7685e43debbfa00cc2a5eb854dd54b745", size = 139344, upload-time = "2025-11-26T20:27:45.571Z" },
+    { url = "https://files.pythonhosted.org/packages/18/a1/128e3676fb9b4fd965a93554e5e07045975ee6bd6e9fdb536cdffa32e99e/boto3-1.42.70-py3-none-any.whl", hash = "sha256:18a108c4d5df89a200b3949de0d39c0879b100c455e3229ea38275dd392db0f4", size = 140554, upload-time = "2026-03-17T19:43:20.406Z" },
 ]
 
 [[package]]
 name = "botocore"
-version = "1.41.5"
+version = "1.42.70"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jmespath" },
     { name = "python-dateutil" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/90/22/7fe08c726a2e3b11a0aef8bf177e83891c9cb2dc1809d35c9ed91a9e60e6/botocore-1.41.5.tar.gz", hash = "sha256:0367622b811597d183bfcaab4a350f0d3ede712031ce792ef183cabdee80d3bf", size = 14668152, upload-time = "2025-11-26T20:27:38.026Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/66/54/b80e1fcee4f732e0e9314bbb8679be9d5690caa1566c4a4cd14e9724d2dd/botocore-1.42.70.tar.gz", hash = "sha256:9ee17553b7febd1a0c1253b3b62ab5d79607eb6163c8fb943470a8893c31d4fa", size = 14997068, upload-time = "2026-03-17T19:43:10.678Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4e/4e/21cd0b8f365449f1576f93de1ec8718ed18a7a3bc086dfbdeb79437bba7a/botocore-1.41.5-py3-none-any.whl", hash = "sha256:3fef7fcda30c82c27202d232cfdbd6782cb27f20f8e7e21b20606483e66ee73a", size = 14337008, upload-time = "2025-11-26T20:27:35.208Z" },
+    { url = "https://files.pythonhosted.org/packages/fb/51/08f32aea872253173f513ba68122f4300966290677c8e59887b4ffd5d957/botocore-1.42.70-py3-none-any.whl", hash = "sha256:54ed9d25f05f810efd22b0dfda0bb9178df3ad8952b2e4359e05156c9321bd3c", size = 14671393, upload-time = "2026-03-17T19:43:06.777Z" },
 ]
 
 [[package]]
@@ -10086,70 +10074,10 @@ wheels = [
 
 [[package]]
 name = "cryptography"
-version = "44.0.3"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.15' and sys_platform == 'win32'",
-    "python_full_version >= '3.15' and sys_platform == 'emscripten'",
-    "python_full_version >= '3.15' and sys_platform != 'emscripten' and sys_platform != 'win32'",
-    "python_full_version == '3.14.*' and sys_platform == 'linux'",
-    "python_full_version == '3.14.*' and sys_platform != 'linux'",
-    "python_full_version == '3.13.*'",
-    "python_full_version == '3.12.*'",
-]
-dependencies = [
-    { name = "cffi", marker = "python_full_version >= '3.12' and platform_python_implementation != 'PyPy'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/53/d6/1411ab4d6108ab167d06254c5be517681f1e331f90edf1379895bcb87020/cryptography-44.0.3.tar.gz", hash = "sha256:fe19d8bc5536a91a24a8133328880a41831b6c5df54599a8417b62fe015d3053", size = 711096, upload-time = "2025-05-02T19:36:04.667Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/08/53/c776d80e9d26441bb3868457909b4e74dd9ccabd182e10b2b0ae7a07e265/cryptography-44.0.3-cp37-abi3-macosx_10_9_universal2.whl", hash = "sha256:962bc30480a08d133e631e8dfd4783ab71cc9e33d5d7c1e192f0b7c06397bb88", size = 6670281, upload-time = "2025-05-02T19:34:50.665Z" },
-    { url = "https://files.pythonhosted.org/packages/6a/06/af2cf8d56ef87c77319e9086601bef621bedf40f6f59069e1b6d1ec498c5/cryptography-44.0.3-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4ffc61e8f3bf5b60346d89cd3d37231019c17a081208dfbbd6e1605ba03fa137", size = 3959305, upload-time = "2025-05-02T19:34:53.042Z" },
-    { url = "https://files.pythonhosted.org/packages/ae/01/80de3bec64627207d030f47bf3536889efee8913cd363e78ca9a09b13c8e/cryptography-44.0.3-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:58968d331425a6f9eedcee087f77fd3c927c88f55368f43ff7e0a19891f2642c", size = 4171040, upload-time = "2025-05-02T19:34:54.675Z" },
-    { url = "https://files.pythonhosted.org/packages/bd/48/bb16b7541d207a19d9ae8b541c70037a05e473ddc72ccb1386524d4f023c/cryptography-44.0.3-cp37-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:e28d62e59a4dbd1d22e747f57d4f00c459af22181f0b2f787ea83f5a876d7c76", size = 3963411, upload-time = "2025-05-02T19:34:56.61Z" },
-    { url = "https://files.pythonhosted.org/packages/42/b2/7d31f2af5591d217d71d37d044ef5412945a8a8e98d5a2a8ae4fd9cd4489/cryptography-44.0.3-cp37-abi3-manylinux_2_28_armv7l.manylinux_2_31_armv7l.whl", hash = "sha256:af653022a0c25ef2e3ffb2c673a50e5a0d02fecc41608f4954176f1933b12359", size = 3689263, upload-time = "2025-05-02T19:34:58.591Z" },
-    { url = "https://files.pythonhosted.org/packages/25/50/c0dfb9d87ae88ccc01aad8eb93e23cfbcea6a6a106a9b63a7b14c1f93c75/cryptography-44.0.3-cp37-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:157f1f3b8d941c2bd8f3ffee0af9b049c9665c39d3da9db2dc338feca5e98a43", size = 4196198, upload-time = "2025-05-02T19:35:00.988Z" },
-    { url = "https://files.pythonhosted.org/packages/66/c9/55c6b8794a74da652690c898cb43906310a3e4e4f6ee0b5f8b3b3e70c441/cryptography-44.0.3-cp37-abi3-manylinux_2_34_aarch64.whl", hash = "sha256:c6cd67722619e4d55fdb42ead64ed8843d64638e9c07f4011163e46bc512cf01", size = 3966502, upload-time = "2025-05-02T19:35:03.091Z" },
-    { url = "https://files.pythonhosted.org/packages/b6/f7/7cb5488c682ca59a02a32ec5f975074084db4c983f849d47b7b67cc8697a/cryptography-44.0.3-cp37-abi3-manylinux_2_34_x86_64.whl", hash = "sha256:b424563394c369a804ecbee9b06dfb34997f19d00b3518e39f83a5642618397d", size = 4196173, upload-time = "2025-05-02T19:35:05.018Z" },
-    { url = "https://files.pythonhosted.org/packages/d2/0b/2f789a8403ae089b0b121f8f54f4a3e5228df756e2146efdf4a09a3d5083/cryptography-44.0.3-cp37-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:c91fc8e8fd78af553f98bc7f2a1d8db977334e4eea302a4bfd75b9461c2d8904", size = 4087713, upload-time = "2025-05-02T19:35:07.187Z" },
-    { url = "https://files.pythonhosted.org/packages/1d/aa/330c13655f1af398fc154089295cf259252f0ba5df93b4bc9d9c7d7f843e/cryptography-44.0.3-cp37-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:25cd194c39fa5a0aa4169125ee27d1172097857b27109a45fadc59653ec06f44", size = 4299064, upload-time = "2025-05-02T19:35:08.879Z" },
-    { url = "https://files.pythonhosted.org/packages/10/a8/8c540a421b44fd267a7d58a1fd5f072a552d72204a3f08194f98889de76d/cryptography-44.0.3-cp37-abi3-win32.whl", hash = "sha256:3be3f649d91cb182c3a6bd336de8b61a0a71965bd13d1a04a0e15b39c3d5809d", size = 2773887, upload-time = "2025-05-02T19:35:10.41Z" },
-    { url = "https://files.pythonhosted.org/packages/b9/0d/c4b1657c39ead18d76bbd122da86bd95bdc4095413460d09544000a17d56/cryptography-44.0.3-cp37-abi3-win_amd64.whl", hash = "sha256:3883076d5c4cc56dbef0b898a74eb6992fdac29a7b9013870b34efe4ddb39a0d", size = 3209737, upload-time = "2025-05-02T19:35:12.12Z" },
-    { url = "https://files.pythonhosted.org/packages/34/a3/ad08e0bcc34ad436013458d7528e83ac29910943cea42ad7dd4141a27bbb/cryptography-44.0.3-cp39-abi3-macosx_10_9_universal2.whl", hash = "sha256:5639c2b16764c6f76eedf722dbad9a0914960d3489c0cc38694ddf9464f1bb2f", size = 6673501, upload-time = "2025-05-02T19:35:13.775Z" },
-    { url = "https://files.pythonhosted.org/packages/b1/f0/7491d44bba8d28b464a5bc8cc709f25a51e3eac54c0a4444cf2473a57c37/cryptography-44.0.3-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f3ffef566ac88f75967d7abd852ed5f182da252d23fac11b4766da3957766759", size = 3960307, upload-time = "2025-05-02T19:35:15.917Z" },
-    { url = "https://files.pythonhosted.org/packages/f7/c8/e5c5d0e1364d3346a5747cdcd7ecbb23ca87e6dea4f942a44e88be349f06/cryptography-44.0.3-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:192ed30fac1728f7587c6f4613c29c584abdc565d7417c13904708db10206645", size = 4170876, upload-time = "2025-05-02T19:35:18.138Z" },
-    { url = "https://files.pythonhosted.org/packages/73/96/025cb26fc351d8c7d3a1c44e20cf9a01e9f7cf740353c9c7a17072e4b264/cryptography-44.0.3-cp39-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:7d5fe7195c27c32a64955740b949070f21cba664604291c298518d2e255931d2", size = 3964127, upload-time = "2025-05-02T19:35:19.864Z" },
-    { url = "https://files.pythonhosted.org/packages/01/44/eb6522db7d9f84e8833ba3bf63313f8e257729cf3a8917379473fcfd6601/cryptography-44.0.3-cp39-abi3-manylinux_2_28_armv7l.manylinux_2_31_armv7l.whl", hash = "sha256:3f07943aa4d7dad689e3bb1638ddc4944cc5e0921e3c227486daae0e31a05e54", size = 3689164, upload-time = "2025-05-02T19:35:21.449Z" },
-    { url = "https://files.pythonhosted.org/packages/68/fb/d61a4defd0d6cee20b1b8a1ea8f5e25007e26aeb413ca53835f0cae2bcd1/cryptography-44.0.3-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:cb90f60e03d563ca2445099edf605c16ed1d5b15182d21831f58460c48bffb93", size = 4198081, upload-time = "2025-05-02T19:35:23.187Z" },
-    { url = "https://files.pythonhosted.org/packages/1b/50/457f6911d36432a8811c3ab8bd5a6090e8d18ce655c22820994913dd06ea/cryptography-44.0.3-cp39-abi3-manylinux_2_34_aarch64.whl", hash = "sha256:ab0b005721cc0039e885ac3503825661bd9810b15d4f374e473f8c89b7d5460c", size = 3967716, upload-time = "2025-05-02T19:35:25.426Z" },
-    { url = "https://files.pythonhosted.org/packages/35/6e/dca39d553075980ccb631955c47b93d87d27f3596da8d48b1ae81463d915/cryptography-44.0.3-cp39-abi3-manylinux_2_34_x86_64.whl", hash = "sha256:3bb0847e6363c037df8f6ede57d88eaf3410ca2267fb12275370a76f85786a6f", size = 4197398, upload-time = "2025-05-02T19:35:27.678Z" },
-    { url = "https://files.pythonhosted.org/packages/9b/9d/d1f2fe681eabc682067c66a74addd46c887ebacf39038ba01f8860338d3d/cryptography-44.0.3-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:b0cc66c74c797e1db750aaa842ad5b8b78e14805a9b5d1348dc603612d3e3ff5", size = 4087900, upload-time = "2025-05-02T19:35:29.312Z" },
-    { url = "https://files.pythonhosted.org/packages/c4/f5/3599e48c5464580b73b236aafb20973b953cd2e7b44c7c2533de1d888446/cryptography-44.0.3-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:6866df152b581f9429020320e5eb9794c8780e90f7ccb021940d7f50ee00ae0b", size = 4301067, upload-time = "2025-05-02T19:35:31.547Z" },
-    { url = "https://files.pythonhosted.org/packages/a7/6c/d2c48c8137eb39d0c193274db5c04a75dab20d2f7c3f81a7dcc3a8897701/cryptography-44.0.3-cp39-abi3-win32.whl", hash = "sha256:c138abae3a12a94c75c10499f1cbae81294a6f983b3af066390adee73f433028", size = 2775467, upload-time = "2025-05-02T19:35:33.805Z" },
-    { url = "https://files.pythonhosted.org/packages/c9/ad/51f212198681ea7b0deaaf8846ee10af99fba4e894f67b353524eab2bbe5/cryptography-44.0.3-cp39-abi3-win_amd64.whl", hash = "sha256:5d186f32e52e66994dce4f766884bcb9c68b8da62d61d9d215bfe5fb56d21334", size = 3210375, upload-time = "2025-05-02T19:35:35.369Z" },
-    { url = "https://files.pythonhosted.org/packages/7f/10/abcf7418536df1eaba70e2cfc5c8a0ab07aa7aa02a5cbc6a78b9d8b4f121/cryptography-44.0.3-pp310-pypy310_pp73-macosx_10_9_x86_64.whl", hash = "sha256:cad399780053fb383dc067475135e41c9fe7d901a97dd5d9c5dfb5611afc0d7d", size = 3393192, upload-time = "2025-05-02T19:35:37.468Z" },
-    { url = "https://files.pythonhosted.org/packages/06/59/ecb3ef380f5891978f92a7f9120e2852b1df6f0a849c277b8ea45b865db2/cryptography-44.0.3-pp310-pypy310_pp73-manylinux_2_28_aarch64.whl", hash = "sha256:21a83f6f35b9cc656d71b5de8d519f566df01e660ac2578805ab245ffd8523f8", size = 3898419, upload-time = "2025-05-02T19:35:39.065Z" },
-    { url = "https://files.pythonhosted.org/packages/bb/d0/35e2313dbb38cf793aa242182ad5bc5ef5c8fd4e5dbdc380b936c7d51169/cryptography-44.0.3-pp310-pypy310_pp73-manylinux_2_28_x86_64.whl", hash = "sha256:fc3c9babc1e1faefd62704bb46a69f359a9819eb0292e40df3fb6e3574715cd4", size = 4117892, upload-time = "2025-05-02T19:35:40.839Z" },
-    { url = "https://files.pythonhosted.org/packages/dc/c8/31fb6e33b56c2c2100d76de3fd820afaa9d4d0b6aea1ccaf9aaf35dc7ce3/cryptography-44.0.3-pp310-pypy310_pp73-manylinux_2_34_aarch64.whl", hash = "sha256:e909df4053064a97f1e6565153ff8bb389af12c5c8d29c343308760890560aff", size = 3900855, upload-time = "2025-05-02T19:35:42.599Z" },
-    { url = "https://files.pythonhosted.org/packages/43/2a/08cc2ec19e77f2a3cfa2337b429676406d4bb78ddd130a05c458e7b91d73/cryptography-44.0.3-pp310-pypy310_pp73-manylinux_2_34_x86_64.whl", hash = "sha256:dad80b45c22e05b259e33ddd458e9e2ba099c86ccf4e88db7bbab4b747b18d06", size = 4117619, upload-time = "2025-05-02T19:35:44.774Z" },
-    { url = "https://files.pythonhosted.org/packages/02/68/fc3d3f84022a75f2ac4b1a1c0e5d6a0c2ea259e14cd4aae3e0e68e56483c/cryptography-44.0.3-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:479d92908277bed6e1a1c69b277734a7771c2b78633c224445b5c60a9f4bc1d9", size = 3136570, upload-time = "2025-05-02T19:35:46.94Z" },
-    { url = "https://files.pythonhosted.org/packages/8d/4b/c11ad0b6c061902de5223892d680e89c06c7c4d606305eb8de56c5427ae6/cryptography-44.0.3-pp311-pypy311_pp73-macosx_10_9_x86_64.whl", hash = "sha256:896530bc9107b226f265effa7ef3f21270f18a2026bc09fed1ebd7b66ddf6375", size = 3390230, upload-time = "2025-05-02T19:35:49.062Z" },
-    { url = "https://files.pythonhosted.org/packages/58/11/0a6bf45d53b9b2290ea3cec30e78b78e6ca29dc101e2e296872a0ffe1335/cryptography-44.0.3-pp311-pypy311_pp73-manylinux_2_28_aarch64.whl", hash = "sha256:9b4d4a5dbee05a2c390bf212e78b99434efec37b17a4bff42f50285c5c8c9647", size = 3895216, upload-time = "2025-05-02T19:35:51.351Z" },
-    { url = "https://files.pythonhosted.org/packages/0a/27/b28cdeb7270e957f0077a2c2bfad1b38f72f1f6d699679f97b816ca33642/cryptography-44.0.3-pp311-pypy311_pp73-manylinux_2_28_x86_64.whl", hash = "sha256:02f55fb4f8b79c1221b0961488eaae21015b69b210e18c386b69de182ebb1259", size = 4115044, upload-time = "2025-05-02T19:35:53.044Z" },
-    { url = "https://files.pythonhosted.org/packages/35/b0/ec4082d3793f03cb248881fecefc26015813199b88f33e3e990a43f79835/cryptography-44.0.3-pp311-pypy311_pp73-manylinux_2_34_aarch64.whl", hash = "sha256:dd3db61b8fe5be220eee484a17233287d0be6932d056cf5738225b9c05ef4fff", size = 3898034, upload-time = "2025-05-02T19:35:54.72Z" },
-    { url = "https://files.pythonhosted.org/packages/0b/7f/adf62e0b8e8d04d50c9a91282a57628c00c54d4ae75e2b02a223bd1f2613/cryptography-44.0.3-pp311-pypy311_pp73-manylinux_2_34_x86_64.whl", hash = "sha256:978631ec51a6bbc0b7e58f23b68a8ce9e5f09721940933e9c217068388789fe5", size = 4114449, upload-time = "2025-05-02T19:35:57.139Z" },
-    { url = "https://files.pythonhosted.org/packages/87/62/d69eb4a8ee231f4bf733a92caf9da13f1c81a44e874b1d4080c25ecbb723/cryptography-44.0.3-pp311-pypy311_pp73-win_amd64.whl", hash = "sha256:5d20cc348cca3a8aa7312f42ab953a56e15323800ca3ab0706b8cd452a3a056c", size = 3134369, upload-time = "2025-05-02T19:35:58.907Z" },
-]
-
-[[package]]
-name = "cryptography"
 version = "46.0.5"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version == '3.11.*'",
-    "python_full_version < '3.11'",
-]
 dependencies = [
-    { name = "cffi", marker = "python_full_version < '3.12' and platform_python_implementation != 'PyPy'" },
+    { name = "cffi", marker = "platform_python_implementation != 'PyPy'" },
     { name = "typing-extensions", marker = "python_full_version < '3.11'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/60/04/ee2a9e8542e4fa2773b81771ff8349ff19cdd56b7258a0cc442639052edb/cryptography-46.0.5.tar.gz", hash = "sha256:abace499247268e3757271b2f1e244b36b06f8515cf27c4d49468fc9eb16e93d", size = 750064, upload-time = "2026-02-10T19:18:38.255Z" }
@@ -11271,11 +11199,11 @@ wheels = [
 
 [[package]]
 name = "fsspec"
-version = "2025.12.0"
+version = "2026.2.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b6/27/954057b0d1f53f086f681755207dda6de6c660ce133c829158e8e8fe7895/fsspec-2025.12.0.tar.gz", hash = "sha256:c505de011584597b1060ff778bb664c1bc022e87921b0e4f10cc9c44f9635973", size = 309748, upload-time = "2025-12-03T15:23:42.687Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/51/7c/f60c259dcbf4f0c47cc4ddb8f7720d2dcdc8888c8e5ad84c73ea4531cc5b/fsspec-2026.2.0.tar.gz", hash = "sha256:6544e34b16869f5aacd5b90bdf1a71acb37792ea3ddf6125ee69a22a53fb8bff", size = 313441, upload-time = "2026-02-05T21:50:53.743Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/51/c7/b64cae5dba3a1b138d7123ec36bb5ccd39d39939f18454407e5468f4763f/fsspec-2025.12.0-py3-none-any.whl", hash = "sha256:8bf1fe301b7d8acfa6e8571e3b1c3d158f909666642431cc78a1b7b4dbc5ec5b", size = 201422, upload-time = "2025-12-03T15:23:41.434Z" },
+    { url = "https://files.pythonhosted.org/packages/e6/ab/fb21f4c939bb440104cc2b396d3be1d9b7a9fd3c6c2a53d98c45b3d7c954/fsspec-2026.2.0-py3-none-any.whl", hash = "sha256:98de475b5cb3bd66bedd5c4679e87b4fdfe1a3bf4d707b151b3c07e58c9a2437", size = 202505, upload-time = "2026-02-05T21:50:51.819Z" },
 ]
 
 [[package]]
@@ -11295,8 +11223,7 @@ dependencies = [
     { name = "aiohttp" },
     { name = "backoff" },
     { name = "chardet" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pyjwt" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/6e/15/a3acb1393934d4909efe75c69fe94536c592ff5953f03922d20186fe4fb1/gcloud_aio_auth-5.4.4.tar.gz", hash = "sha256:70b8c6edf8655003251905372e6815a24ab839bf201788a903964570e9b4091f", size = 13851, upload-time = "2026-02-26T16:38:55.11Z" }
@@ -11333,7 +11260,7 @@ wheels = [
 
 [[package]]
 name = "gcsfs"
-version = "2025.12.0"
+version = "2026.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -11345,9 +11272,9 @@ dependencies = [
     { name = "google-cloud-storage-control" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3e/3e/453b42bbcda2177daba97ebc5202faf5c57cc0c2bb4aac7081c12b0471da/gcsfs-2025.12.0.tar.gz", hash = "sha256:9a9c1c32b7899a3967ba30a7e9422cdfda596266f03476cdf5545402b8af4cd5", size = 95148, upload-time = "2025-12-03T15:44:59.703Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8c/91/e7a2f237d51436a4fc947f30f039d2c277bb4f4ce02f86628ba0a094a3ce/gcsfs-2026.2.0.tar.gz", hash = "sha256:d58a885d9e9c6227742b86da419c7a458e1f33c1de016e826ea2909f6338ed84", size = 163376, upload-time = "2026-02-06T18:35:52.217Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b1/bf/e664cbeab8f2a8b097c0604252760410fde191fe6ac7d5081b29e601ac52/gcsfs-2025.12.0-py3-none-any.whl", hash = "sha256:e06aaec53797dc6b83d5cc90c4d3ae7247b4ee0cf8d8b1ce50e8d6b78e3a9aea", size = 41204, upload-time = "2025-12-03T15:44:58.464Z" },
+    { url = "https://files.pythonhosted.org/packages/9c/6b/c2f68ac51229fc94f094c7f802648fc1de3d19af36434def5e64c0caa32b/gcsfs-2026.2.0-py3-none-any.whl", hash = "sha256:407feaa2af0de81ebce44ea7e6f68598a3753e5e42257b61d6a9f8c0d6d4754e", size = 57557, upload-time = "2026-02-06T18:35:51.09Z" },
 ]
 
 [[package]]
@@ -11469,9 +11396,11 @@ dependencies = [
     { name = "google-auth-oauthlib" },
     { name = "googleapis-common-protos" },
     { name = "grpcio" },
-    { name = "grpcio-status" },
+    { name = "grpcio-status", version = "1.71.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "grpcio-status", version = "1.78.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "pyyaml" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/0a/27/29c058cb160f8d507aa85585e75402fdb041506dfb172cbb06645a1d1f28/google_ads-28.1.1.tar.gz", hash = "sha256:9b6d18337fbecee783c882eab1f2ec1f99898ef11920aaf1d5d5cb70a5deb869", size = 9216790, upload-time = "2025-10-16T15:17:56.844Z" }
@@ -11488,7 +11417,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/91/c6/39cd01ee39dbe66b09816ba26b64b8501f93305f5e3771042f604fef5478/google_analytics_admin-0.27.0.tar.gz", hash = "sha256:e063a61f0c0fd9a5257a07bfb245327ad704a461b1cb30914183eb1207c2f693", size = 615528, upload-time = "2026-01-15T13:15:19.715Z" }
 wheels = [
@@ -11497,24 +11427,26 @@ wheels = [
 
 [[package]]
 name = "google-api-core"
-version = "2.25.2"
+version = "2.30.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "google-auth" },
     { name = "googleapis-common-protos" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/09/cd/63f1557235c2440fe0577acdbc32577c5c002684c58c7f4d770a92366a24/google_api_core-2.25.2.tar.gz", hash = "sha256:1c63aa6af0d0d5e37966f157a77f9396d820fba59f9e43e9415bc3dc5baff300", size = 166266, upload-time = "2025-10-03T00:07:34.778Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/22/98/586ec94553b569080caef635f98a3723db36a38eac0e3d7eb3ea9d2e4b9a/google_api_core-2.30.0.tar.gz", hash = "sha256:02edfa9fab31e17fc0befb5f161b3bf93c9096d99aed584625f38065c511ad9b", size = 176959, upload-time = "2026-02-18T20:28:11.926Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/d8/894716a5423933f5c8d2d5f04b16f052a515f78e815dab0c2c6f1fd105dc/google_api_core-2.25.2-py3-none-any.whl", hash = "sha256:e9a8f62d363dc8424a8497f4c2a47d6bcda6c16514c935629c257ab5d10210e7", size = 162489, upload-time = "2025-10-03T00:07:32.924Z" },
+    { url = "https://files.pythonhosted.org/packages/45/27/09c33d67f7e0dcf06d7ac17d196594e66989299374bfb0d4331d1038e76b/google_api_core-2.30.0-py3-none-any.whl", hash = "sha256:80be49ee937ff9aba0fd79a6eddfde35fe658b9953ab9b79c57dd7061afa8df5", size = 173288, upload-time = "2026-02-18T20:28:10.367Z" },
 ]
 
 [package.optional-dependencies]
 grpc = [
     { name = "grpcio" },
-    { name = "grpcio-status" },
+    { name = "grpcio-status", version = "1.71.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "grpcio-status", version = "1.78.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 
 [[package]]
@@ -11538,8 +11470,7 @@ name = "google-auth"
 version = "2.49.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pyasn1-modules" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ea/80/6a696a07d3d3b0a92488933532f03dbefa4a24ab80fb231395b9a2a1be77/google_auth-2.49.1.tar.gz", hash = "sha256:16d40da1c3c5a0533f57d268fe72e0ebb0ae1cc3b567024122651c045d879b64", size = 333825, upload-time = "2026-03-12T19:30:58.135Z" }
@@ -11592,7 +11523,8 @@ dependencies = [
     { name = "google-genai" },
     { name = "packaging" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
@@ -11623,7 +11555,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a9/4d/f79470b4ece1b46c423ea6529bcd96447af71c573052b6a21cc32cec62ec/google_cloud_alloydb-0.8.0.tar.gz", hash = "sha256:a8e5fb108a94b0eeea0634706cb4ff335cce82b56d2f66cc86951b9ab8322a92", size = 696060, upload-time = "2026-03-06T21:53:02.274Z" }
 wheels = [
@@ -11639,7 +11572,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/65/38/89317773c64b5a7e9b56b9aecb2e39ac02d8d6d09fb5b276710c6892e690/google_cloud_appengine_logging-1.8.0.tar.gz", hash = "sha256:84b705a69e4109fc2f68dfe36ce3df6a34d5c3d989eee6d0ac1b024dda0ba6f5", size = 18071, upload-time = "2026-01-15T13:14:40.024Z" }
 wheels = [
@@ -11652,7 +11586,8 @@ version = "0.4.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "googleapis-common-protos" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c7/d2/ad96950410f8a05e921a6da2e1a6ba4aeca674bbb5dda8200c3c7296d7ad/google_cloud_audit_log-0.4.0.tar.gz", hash = "sha256:8467d4dcca9f3e6160520c24d71592e49e874838f174762272ec10e7950b6feb", size = 44682, upload-time = "2025-10-17T02:33:44.641Z" }
 wheels = [
@@ -11668,7 +11603,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b2/5e/829f7bce581d836dbcaa2c28bc01329eb1b7cd79276d40dc72aea98c9b32/google_cloud_automl-2.18.1.tar.gz", hash = "sha256:bffa8ae04f5a7201febadf8fd0224e29b2281bf5a91b97590f27eb34e24f8229", size = 395404, upload-time = "2026-01-29T15:32:50.011Z" }
 wheels = [
@@ -11684,7 +11620,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/3c/1c/1d3c3287f7cc6e54cd2456509a8696c90e504b329553c0cef77f939b8026/google_cloud_batch-0.20.0.tar.gz", hash = "sha256:a1b9094e7c2fc250431c9785a8adb9decbd0162ed1cca8ce91741bee0694e62c", size = 205648, upload-time = "2026-01-15T13:14:27.616Z" }
 wheels = [
@@ -11718,7 +11655,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e3/29/83d4249c7cbd624262cb0a9ce8d6defde8f7dda6b244b117a70f8ba32619/google_cloud_bigquery_datatransfer-3.21.0.tar.gz", hash = "sha256:cd581904049ff3422fe113c715af4ecbb13cfbf52a53e97add41fa9e5ebe4870", size = 112118, upload-time = "2026-01-15T13:14:43.358Z" }
 wheels = [
@@ -11734,7 +11672,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e0/fa/877e0059349369be38a64586b135c59ceadb87d0386084043d8c440ef929/google_cloud_bigquery_storage-2.36.2.tar.gz", hash = "sha256:ad49d8c09ad6cd82da4efe596fcfcdbc1458bf05b93915e3c5c00f1e700ae128", size = 308672, upload-time = "2026-02-19T16:03:10.544Z" }
 wheels = [
@@ -11752,7 +11691,8 @@ dependencies = [
     { name = "google-crc32c" },
     { name = "grpc-google-iam-v1" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/57/c9/aceae21411b1a77fb4d3cde6e6f461321ee33c65fb8dc53480d4e47e1a55/google_cloud_bigtable-2.35.0.tar.gz", hash = "sha256:f5699012c5fea4bd4bdf7e80e5e3a812a847eb8f41bf8dc2f43095d6d876b83b", size = 775613, upload-time = "2025-12-17T15:18:14.303Z" }
 wheels = [
@@ -11769,7 +11709,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/48/71/b5553d445b12fdddab5e03e33ac332d23ebdad671434dd8e3e58f7c69bb4/google_cloud_build-3.35.0.tar.gz", hash = "sha256:563561a124b2f49aefadb3b3dc509417917967d0dd930b0e47db4447aa040f7e", size = 241556, upload-time = "2026-01-15T13:15:38.973Z" }
 wheels = [
@@ -11785,7 +11726,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1b/3d/3511c167269ca7871de1b5438088749a46d5d60f65d22bef0dd4403e2301/google_cloud_compute-1.46.0.tar.gz", hash = "sha256:8b0f8d5a1115e8beae5fafdc7050f1ad15e922a5cdf6c634e5a745e47cb49281", size = 5051282, upload-time = "2026-03-12T19:31:03.81Z" }
 wheels = [
@@ -11801,7 +11743,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/d8/1c/56a191ced537a1f8bc45aeee76658f4d651ef4cc8e6f0d3f321cb8f66fa6/google_cloud_container-2.63.0.tar.gz", hash = "sha256:6d634073cfd01623639b6b2e5b9b9cc34ae2075121bf88c136e440bb6a3a2f87", size = 397242, upload-time = "2026-01-29T15:32:53.299Z" }
 wheels = [
@@ -11831,7 +11774,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/05/fd/148373bb0ed1ef03a7970f6f637ff904ee386b75964e1ef6508c20d11599/google_cloud_datacatalog-3.29.0.tar.gz", hash = "sha256:0e13552bf4b78882348515efe29f0e7e38436d06b7d8be8c158ca7a61b3e6b22", size = 410058, upload-time = "2026-01-15T13:14:21.061Z" }
 wheels = [
@@ -11847,7 +11791,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/88/a8/3353f86c0bdd9a329d835852f029f2797dd99450992bf01758397067c08c/google_cloud_dataflow_client-0.11.0.tar.gz", hash = "sha256:492be0882bcc39982ad975cb0ee2e1a93fea585d178dddf76a23ae14159dcb99", size = 277951, upload-time = "2026-01-15T13:14:34.516Z" }
 wheels = [
@@ -11864,7 +11809,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f7/aa/5d49ff86601be438c0e91fcf01e53105f597103d5ff2d21fd0bfce2075ac/google_cloud_dataform-0.9.0.tar.gz", hash = "sha256:c7cdd79c23659815d7a5b044fbb242ef4ffc5f2bc0e626690352cd9e8de5b511", size = 431612, upload-time = "2026-02-12T14:50:09.336Z" }
 wheels = [
@@ -11881,7 +11827,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ac/64/38445469e85e20b6fbb0ad58d0466daa3bd779789729562c12b35cfc24c3/google_cloud_dataplex-2.16.0.tar.gz", hash = "sha256:f9086abb94ae1f35151b2df5b729cc6bbf9361354d5afd22e76515ec0a8e7fdc", size = 766385, upload-time = "2026-01-15T13:15:22.79Z" }
 wheels = [
@@ -11898,7 +11845,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e7/b3/45f98aa11715d7da3abd7f3d02c05ce354e1a8fce0715e5ba95672c5a3a3/google_cloud_dataproc-5.25.0.tar.gz", hash = "sha256:675151a6b0448c19609498bedceccf1fa533808568f4ee124fd2585706f424d6", size = 581114, upload-time = "2026-02-19T16:03:07.945Z" }
 wheels = [
@@ -11915,7 +11863,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a0/17/8dccf594a92e1505f38105ff37094413f58c6539bd3eda675e7cf1cfff88/google_cloud_dataproc_metastore-1.21.0.tar.gz", hash = "sha256:dc16f11952b4ec5f2bb30b94c08f73921182f6ad464f02c964b28414092aea5c", size = 565644, upload-time = "2026-01-15T13:15:42.315Z" }
 wheels = [
@@ -11931,7 +11880,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a1/45/5ca549ff23120f0ea255a8d4638cd717c859587947899362af6b0a82ac5b/google_cloud_dlp-3.34.0.tar.gz", hash = "sha256:6dfa3172520d5a7fa8ccce47a9622cde815f037b4aa6fb6d69984fd597bf8007", size = 276443, upload-time = "2026-01-15T13:14:30.826Z" }
 wheels = [
@@ -11948,7 +11898,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ae/7d/a13ba13808c08c467b315f71a74189848a3305ebb5c098f5f0386e209cec/google_cloud_kms-3.11.0.tar.gz", hash = "sha256:5f7d7bdb347f13a8a2b7bad6cbdf3846a51690df7215586845b62851b88839f7", size = 434866, upload-time = "2026-02-19T16:03:11.932Z" }
 wheels = [
@@ -11964,7 +11915,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/de/b1/8639ee6fb8cef96d5c8179ee91ff47522a8221e8b03dbd54aa684546f4af/google_cloud_language-2.19.0.tar.gz", hash = "sha256:3b88f6eabd1c2413a1c6c918cbe40a22a5d14401930309717dbb709b353c6c64", size = 186611, upload-time = "2026-01-15T13:14:07.486Z" }
 wheels = [
@@ -11985,7 +11937,8 @@ dependencies = [
     { name = "grpcio" },
     { name = "opentelemetry-api" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/9d/ce/0d3539008dc33b436e7c5c644abc8f8a7ec5900911d14a8e34e145f0ebe5/google_cloud_logging-3.14.0.tar.gz", hash = "sha256:361e83cd692fecc7da10351f641c474591f586f234fc49394db4ba5c8c5994a7", size = 293452, upload-time = "2026-03-06T21:53:07.526Z" }
 wheels = [
@@ -12001,7 +11954,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c9/a1/44d4d3a1cc7db5814c90210ee2c0afeb40efab753ad2f27a0fba2105619c/google_cloud_managedkafka-0.3.0.tar.gz", hash = "sha256:92d2d2b89517da8fb679d861476e9d9508b8c468ced89ab9a72cf3dbb3d17b03", size = 201998, upload-time = "2026-01-15T13:04:05.387Z" }
 wheels = [
@@ -12017,7 +11971,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/09/85/dca5aad714e00967b64b26dc6fa9989f110ff146c5b18d673384fbb3a460/google_cloud_memcache-1.14.0.tar.gz", hash = "sha256:5791e38ded9147713f895d4384a8e55aa340848f51ef61ae7f4f2b3076a67eb3", size = 169315, upload-time = "2026-01-15T13:04:22.62Z" }
 wheels = [
@@ -12033,7 +11988,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/97/06/9fc0a34bed4221a68eef3e0373ae054de367dc42c0b689d5d917587ef61b/google_cloud_monitoring-2.29.1.tar.gz", hash = "sha256:86cac55cdd2608561819d19544fb3c129bbb7dcecc445d8de426e34cd6fa8e49", size = 404383, upload-time = "2026-02-05T18:59:13.026Z" }
 wheels = [
@@ -12049,7 +12005,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/51/58/8265a39c48ffe44aceb28d808fb749fe89980c0aa81388b6270d5faf295f/google_cloud_orchestration_airflow-1.19.0.tar.gz", hash = "sha256:372090e2ce7e052f6e6221862fd5645a8de36bdcb45048f59cc3319bdab4d80e", size = 341642, upload-time = "2026-01-15T13:04:37.951Z" }
 wheels = [
@@ -12065,7 +12022,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/54/ea/8dbf9296acce88240e979c7ef507e1a1b746531264f44d14b8c5d75b41f1/google_cloud_os_login-2.19.0.tar.gz", hash = "sha256:7210257aa325609785a673bd5aa57f3464caa5e22b1d93ec80228c97dc6ca0ba", size = 67572, upload-time = "2026-01-15T13:15:19.014Z" }
 wheels = [
@@ -12081,11 +12039,13 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpc-google-iam-v1" },
     { name = "grpcio", marker = "python_full_version < '3.14'" },
-    { name = "grpcio-status" },
+    { name = "grpcio-status", version = "1.71.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "grpcio-status", version = "1.78.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "opentelemetry-api" },
     { name = "opentelemetry-sdk" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/4e/8d/f5cece431daaa2024129569ed35e6eb90a72bb51f0c96e5c7f5cab6d34d7/google_cloud_pubsub-2.36.0.tar.gz", hash = "sha256:96e057e5f83433ce428852095d652c2f7fc193f0f77db1f27cc39186fe69c1f4", size = 401324, upload-time = "2026-03-12T19:31:02.099Z" }
 wheels = [
@@ -12101,7 +12061,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/38/4c/f12d6852c83f467b3ef5f02bd9c887d841c9f6940fe137ccb3d4edbc5978/google_cloud_redis-2.20.0.tar.gz", hash = "sha256:a672e4c6ac418ff20ce89ef702762d6789c3d56ffd17c313e99f925a258f1e8a", size = 184762, upload-time = "2026-01-15T13:03:46.25Z" }
 wheels = [
@@ -12118,7 +12079,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/4e/7f/db00b2820475793a52958dc55fe9ec2eb8e863546e05fcece9b921f86ebe/google_cloud_resource_manager-1.16.0.tar.gz", hash = "sha256:cc938f87cc36c2672f062b1e541650629e0d954c405a4dac35ceedee70c267c3", size = 459840, upload-time = "2026-01-15T13:04:07.726Z" }
 wheels = [
@@ -12135,7 +12097,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a9/99/68f421497e3236272e63eb9d5d6dc95966892b235fbbc727a0b4560e2f9c/google_cloud_run-0.15.0.tar.gz", hash = "sha256:158f264643f982bfa4f4f18f9e28c56ea00ea95c248bc8a746e159b538afab57", size = 508449, upload-time = "2026-01-22T15:37:10.951Z" }
 wheels = [
@@ -12152,7 +12115,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c3/9c/a6c7144bc96df77376ae3fcc916fb639c40814c2e4bba2051d31dc136cd0/google_cloud_secret_manager-2.26.0.tar.gz", hash = "sha256:0d1d6f76327685a0ed78a4cf50f289e1bfbbe56026ed0affa98663b86d6d50d6", size = 277603, upload-time = "2025-12-18T00:29:31.065Z" }
 wheels = [
@@ -12175,7 +12139,8 @@ dependencies = [
     { name = "opentelemetry-sdk" },
     { name = "opentelemetry-semantic-conventions" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "sqlparse" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/82/ee/9ae0794d32ec271b2b2326f17d977d29801e5b960e7a0f03d721aeffe824/google_cloud_spanner-3.63.0.tar.gz", hash = "sha256:e2a4fb3bdbad4688645f455d498705d3f935b7c9011f5c94c137b77569b47a62", size = 729522, upload-time = "2026-02-13T07:35:13.593Z" }
@@ -12192,7 +12157,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/29/f4/ba24128f860639ac7ddef3c1bd2f44b390f3bb0386dda65b3a65948beeed/google_cloud_speech-2.37.0.tar.gz", hash = "sha256:1b2debf721954f1157fb2631d19b29fbeeba5736e58b71aaf10734d6365add59", size = 402950, upload-time = "2026-02-27T14:12:59.384Z" }
 wheels = [
@@ -12201,7 +12167,7 @@ wheels = [
 
 [[package]]
 name = "google-cloud-storage"
-version = "3.4.1"
+version = "3.10.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "google-api-core" },
@@ -12211,9 +12177,9 @@ dependencies = [
     { name = "google-resumable-media" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/bd/ef/7cefdca67a6c8b3af0ec38612f9e78e5a9f6179dd91352772ae1a9849246/google_cloud_storage-3.4.1.tar.gz", hash = "sha256:6f041a297e23a4b485fad8c305a7a6e6831855c208bcbe74d00332a909f82268", size = 17238203, upload-time = "2025-10-08T18:43:39.665Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4c/47/205eb8e9a1739b5345843e5a425775cbdc472cc38e7eda082ba5b8d02450/google_cloud_storage-3.10.1.tar.gz", hash = "sha256:97db9aa4460727982040edd2bd13ff3d5e2260b5331ad22895802da1fc2a5286", size = 17309950, upload-time = "2026-03-23T09:35:23.409Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/83/6e/b47d83d3a35231c6232566341b0355cce78fd4e6988a7343725408547b2c/google_cloud_storage-3.4.1-py3-none-any.whl", hash = "sha256:972764cc0392aa097be8f49a5354e22eb47c3f62370067fb1571ffff4a1c1189", size = 290142, upload-time = "2025-10-08T18:43:37.524Z" },
+    { url = "https://files.pythonhosted.org/packages/ad/ff/ca9ab2417fa913d75aae38bf40bf856bb2749a604b2e0f701b37cfcd23cc/google_cloud_storage-3.10.1-py3-none-any.whl", hash = "sha256:a72f656759b7b99bda700f901adcb3425a828d4a29f911bc26b3ea79c5b1217f", size = 324453, upload-time = "2026-03-23T09:35:21.368Z" },
 ]
 
 [[package]]
@@ -12226,7 +12192,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/cb/c0/12dfbf7c5e86e34da4af971bb043f11cdc9be8d204eb06ac8a1f9b1d5c74/google_cloud_storage_control-1.10.0.tar.gz", hash = "sha256:2bcbfa4ca6530d25a5baa8dbe80caf0eeabe4c6804798f4f107279719c316bdb", size = 116845, upload-time = "2026-02-12T14:50:07.096Z" }
 wheels = [
@@ -12242,7 +12209,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/7f/78/a6a0e07a6d225a0afb42430e2237295b582cd60404abc89752d1bda6c657/google_cloud_storage_transfer-1.19.0.tar.gz", hash = "sha256:c1eee2ee3471bfe51ecb80947c07ac461b76ce246007ca4420b67c259f4092a0", size = 112814, upload-time = "2026-01-15T13:04:59.49Z" }
 wheels = [
@@ -12259,7 +12227,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/b6/58/0238b71de170b92ef359e53047a3d6ff9618c04ee255cbc6def53ab79e11/google_cloud_tasks-2.21.0.tar.gz", hash = "sha256:d28f33248553faf0ff029e1981aab56cd13bd933635c3bc33aa187675e7e14d1", size = 351784, upload-time = "2026-01-15T13:04:43.071Z" }
 wheels = [
@@ -12275,7 +12244,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e5/2b/cf31829499db007107d6a6777bb92dec8b9cc369aa7e579664c0c530c521/google_cloud_texttospeech-2.34.0.tar.gz", hash = "sha256:65837c3bc728f37290009dbef892df87eae45ad80905559096d1107822074f62", size = 192973, upload-time = "2026-01-15T13:05:09.152Z" }
 wheels = [
@@ -12293,7 +12263,8 @@ dependencies = [
     { name = "grpc-google-iam-v1" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/9a/76/4acb671860b86a18aedd94413577e8e66813daadf00cbcc92fd64e022cf0/google_cloud_translate-3.24.0.tar.gz", hash = "sha256:2f3b8b90f8cdaf63a435d18e63b21c3650de31fc4f858623f2d0d69be0cd3e9a", size = 274482, upload-time = "2026-01-15T13:05:11.681Z" }
 wheels = [
@@ -12309,7 +12280,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e0/84/a35183a7493d2ce4da9e7f0f4404f0253190f5aa99597b69215aa712ea3f/google_cloud_videointelligence-2.18.0.tar.gz", hash = "sha256:b2ae39bd22d186218684a297c2fa2fa636e5874e69d39f719504d729f44639fd", size = 258299, upload-time = "2026-01-15T13:04:23.435Z" }
 wheels = [
@@ -12325,7 +12297,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e2/97/ceb4ace86ac302042f409ba1b3887e8a5c0adec7849cde3eec01c42872c1/google_cloud_vision-3.12.1.tar.gz", hash = "sha256:f99b83af7588d30e708b87e09ff73e43e380497fe82c799b9f05e03f310027c8", size = 587767, upload-time = "2026-02-05T18:59:23.603Z" }
 wheels = [
@@ -12341,7 +12314,8 @@ dependencies = [
     { name = "google-auth" },
     { name = "grpcio" },
     { name = "proto-plus" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f1/4f/93338d4070c3d0f8a16dc69765210df0c7a10b268704d02ed29ed3e1255d/google_cloud_workflows-1.20.0.tar.gz", hash = "sha256:6a2708e0ed66dcbde0b676777ac94648ab052b25539d6cabd128cd25d5b171f4", size = 220215, upload-time = "2026-01-15T13:03:42.969Z" }
 wheels = [
@@ -12421,7 +12395,8 @@ name = "googleapis-common-protos"
 version = "1.73.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/99/96/a0205167fa0154f4a542fd6925bdc63d039d88dab3588b875078107e6f06/googleapis_common_protos-1.73.0.tar.gz", hash = "sha256:778d07cd4fbeff84c6f7c72102f0daf98fa2bfd3fa8bea426edc545588da0b5a", size = 147323, upload-time = "2026-03-06T21:53:09.727Z" }
 wheels = [
@@ -12549,6 +12524,7 @@ dependencies = [
     { name = "griffecli" },
     { name = "griffelib" },
 ]
+sdist = { url = "https://files.pythonhosted.org/packages/04/56/28a0accac339c164b52a92c6cfc45a903acc0c174caa5c1713803467b533/griffe-2.0.0.tar.gz", hash = "sha256:c68979cd8395422083a51ea7cf02f9c119d889646d99b7b656ee43725de1b80f", size = 293906, upload-time = "2026-03-23T21:06:53.402Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8b/94/ee21d41e7eb4f823b94603b9d40f86d3c7fde80eacc2c3c71845476dddaa/griffe-2.0.0-py3-none-any.whl", hash = "sha256:5418081135a391c3e6e757a7f3f156f1a1a746cc7b4023868ff7d5e2f9a980aa", size = 5214, upload-time = "2026-02-09T19:09:44.105Z" },
 ]
@@ -12561,6 +12537,7 @@ dependencies = [
     { name = "colorama" },
     { name = "griffelib" },
 ]
+sdist = { url = "https://files.pythonhosted.org/packages/a4/f8/2e129fd4a86e52e58eefe664de05e7d502decf766e7316cc9e70fdec3e18/griffecli-2.0.0.tar.gz", hash = "sha256:312fa5ebb4ce6afc786356e2d0ce85b06c1c20d45abc42d74f0cda65e159f6ef", size = 56213, upload-time = "2026-03-23T21:06:54.8Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e6/ed/d93f7a447bbf7a935d8868e9617cbe1cadf9ee9ee6bd275d3040fbf93d60/griffecli-2.0.0-py3-none-any.whl", hash = "sha256:9f7cd9ee9b21d55e91689358978d2385ae65c22f307a63fb3269acf3f21e643d", size = 9345, upload-time = "2026-02-09T19:09:42.554Z" },
 ]
@@ -12569,6 +12546,7 @@ wheels = [
 name = "griffelib"
 version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ad/06/eccbd311c9e2b3ca45dbc063b93134c57a1ccc7607c5e545264ad092c4a9/griffelib-2.0.0.tar.gz", hash = "sha256:e504d637a089f5cab9b5daf18f7645970509bf4f53eda8d79ed71cce8bd97934", size = 166312, upload-time = "2026-03-23T21:06:55.954Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/4d/51/c936033e16d12b627ea334aaaaf42229c37620d0f15593456ab69ab48161/griffelib-2.0.0-py3-none-any.whl", hash = "sha256:01284878c966508b6d6f1dbff9b6fa607bc062d8261c5c7253cb285b06422a7f", size = 142004, upload-time = "2026-02-09T19:09:40.561Z" },
 ]
@@ -12580,7 +12558,8 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "googleapis-common-protos", extra = ["grpc"] },
     { name = "grpcio" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/76/1e/1011451679a983f2f5c6771a1682542ecb027776762ad031fd0d7129164b/grpc_google_iam_v1-0.14.3.tar.gz", hash = "sha256:879ac4ef33136c5491a6300e27575a9ec760f6cdf9a2518798c1b8977a5dc389", size = 23745, upload-time = "2025-10-15T21:14:53.318Z" }
 wheels = [
@@ -12676,10 +12655,16 @@ wheels = [
 name = "grpcio-status"
 version = "1.71.2"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.13.*'",
+    "python_full_version == '3.12.*'",
+    "python_full_version == '3.11.*'",
+    "python_full_version < '3.11'",
+]
 dependencies = [
-    { name = "googleapis-common-protos" },
-    { name = "grpcio" },
-    { name = "protobuf" },
+    { name = "googleapis-common-protos", marker = "python_full_version < '3.14'" },
+    { name = "grpcio", marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/fd/d1/b6e9877fedae3add1afdeae1f89d1927d296da9cf977eca0eb08fb8a460e/grpcio_status-1.71.2.tar.gz", hash = "sha256:c7a97e176df71cdc2c179cd1847d7fc86cca5832ad12e9798d7fed6b7a1aab50", size = 13677, upload-time = "2025-06-28T04:24:05.426Z" }
 wheels = [
@@ -12687,13 +12672,40 @@ wheels = [
 ]
 
 [[package]]
+name = "grpcio-status"
+version = "1.78.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.15' and sys_platform == 'win32'",
+    "python_full_version >= '3.15' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.15' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.14.*' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and sys_platform != 'linux'",
+]
+dependencies = [
+    { name = "googleapis-common-protos", marker = "python_full_version >= '3.14'" },
+    { name = "grpcio", marker = "python_full_version >= '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8a/cd/89ce482a931b543b92cdd9b2888805518c4620e0094409acb8c81dd4610a/grpcio_status-1.78.0.tar.gz", hash = "sha256:a34cfd28101bfea84b5aa0f936b4b423019e9213882907166af6b3bddc59e189", size = 13808, upload-time = "2026-02-06T10:01:48.034Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/83/8a/1241ec22c41028bddd4a052ae9369267b4475265ad0ce7140974548dc3fa/grpcio_status-1.78.0-py3-none-any.whl", hash = "sha256:b492b693d4bf27b47a6c32590701724f1d3b9444b36491878fb71f6208857f34", size = 14523, upload-time = "2026-02-06T10:01:32.584Z" },
+]
+
+[[package]]
 name = "grpcio-tools"
 version = "1.71.2"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.13.*'",
+    "python_full_version == '3.12.*'",
+    "python_full_version == '3.11.*'",
+    "python_full_version < '3.11'",
+]
 dependencies = [
-    { name = "grpcio" },
-    { name = "protobuf" },
-    { name = "setuptools" },
+    { name = "grpcio", marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "setuptools", marker = "python_full_version < '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ad/9a/edfefb47f11ef6b0f39eea4d8f022c5bb05ac1d14fcc7058e84a51305b73/grpcio_tools-1.71.2.tar.gz", hash = "sha256:b5304d65c7569b21270b568e404a5a843cf027c66552a6a0978b23f137679c09", size = 5330655, upload-time = "2025-06-28T04:22:00.308Z" }
 wheels = [
@@ -12737,6 +12749,76 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/9f/c0/66eab57b14550c5b22404dbf60635c9e33efa003bd747211981a9859b94b/grpcio_tools-1.71.2-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:706360c71bdd722682927a1fb517c276ccb816f1e30cb71f33553e5817dc4031", size = 2913521, upload-time = "2025-06-28T04:21:38.347Z" },
     { url = "https://files.pythonhosted.org/packages/05/9b/7c90af8f937d77005625d705ab1160bc42a7e7b021ee5c788192763bccd6/grpcio_tools-1.71.2-cp313-cp313-win32.whl", hash = "sha256:bcf751d5a81c918c26adb2d6abcef71035c77d6eb9dd16afaf176ee096e22c1d", size = 945322, upload-time = "2025-06-28T04:21:39.864Z" },
     { url = "https://files.pythonhosted.org/packages/5f/80/6db6247f767c94fe551761772f89ceea355ff295fd4574cb8efc8b2d1199/grpcio_tools-1.71.2-cp313-cp313-win_amd64.whl", hash = "sha256:b1581a1133552aba96a730178bc44f6f1a071f0eb81c5b6bc4c0f89f5314e2b8", size = 1117234, upload-time = "2025-06-28T04:21:41.893Z" },
+]
+
+[[package]]
+name = "grpcio-tools"
+version = "1.78.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.15' and sys_platform == 'win32'",
+    "python_full_version >= '3.15' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.15' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.14.*' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and sys_platform != 'linux'",
+]
+dependencies = [
+    { name = "grpcio", marker = "python_full_version >= '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
+    { name = "setuptools", marker = "python_full_version >= '3.14'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8b/d1/cbefe328653f746fd319c4377836a25ba64226e41c6a1d7d5cdbc87a459f/grpcio_tools-1.78.0.tar.gz", hash = "sha256:4b0dd86560274316e155d925158276f8564508193088bc43e20d3f5dff956b2b", size = 5393026, upload-time = "2026-02-06T09:59:59.53Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5e/70/2118a814a62ab205c905d221064bc09021db83fceeb84764d35c00f0f633/grpcio_tools-1.78.0-cp310-cp310-linux_armv7l.whl", hash = "sha256:ea64e38d1caa2b8468b08cb193f5a091d169b6dbfe1c7dac37d746651ab9d84e", size = 2545568, upload-time = "2026-02-06T09:57:30.308Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/a9/68134839dd1a00f964185ead103646d6dd6a396b92ed264eaf521431b793/grpcio_tools-1.78.0-cp310-cp310-macosx_11_0_universal2.whl", hash = "sha256:4003fcd5cbb5d578b06176fd45883a72a8f9203152149b7c680ce28653ad9e3a", size = 5708704, upload-time = "2026-02-06T09:57:33.512Z" },
+    { url = "https://files.pythonhosted.org/packages/36/1b/b6135aa9534e22051c53e5b9c0853d18024a41c50aaff464b7b47c1ed379/grpcio_tools-1.78.0-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:fe6b0081775394c61ec633c9ff5dbc18337100eabb2e946b5c83967fe43b2748", size = 2591905, upload-time = "2026-02-06T09:57:35.338Z" },
+    { url = "https://files.pythonhosted.org/packages/41/2b/6380df1390d62b1d18ae18d4d790115abf4997fa29498aa50ba644ecb9d8/grpcio_tools-1.78.0-cp310-cp310-manylinux2014_i686.manylinux_2_17_i686.whl", hash = "sha256:7e989ad2cd93db52d7f1a643ecaa156ac55bf0484f1007b485979ce8aef62022", size = 2905271, upload-time = "2026-02-06T09:57:37.932Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/07/9b369f37c8f4956b68778c044d57390a8f0f3b1cca590018809e75a4fce2/grpcio_tools-1.78.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:b874991797e96c41a37e563236c3317ed41b915eff25b292b202d6277d30da85", size = 2656234, upload-time = "2026-02-06T09:57:41.157Z" },
+    { url = "https://files.pythonhosted.org/packages/51/61/40eee40e7a54f775a0d4117536532713606b6b177fff5e327f33ad18746e/grpcio_tools-1.78.0-cp310-cp310-musllinux_1_2_aarch64.whl", hash = "sha256:daa8c288b728228377aaf758925692fc6068939d9fa32f92ca13dedcbeb41f33", size = 3105770, upload-time = "2026-02-06T09:57:43.373Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/ac/81ee4b728e70e8ba66a589f86469925ead02ed6f8973434e4a52e3576148/grpcio_tools-1.78.0-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:87e648759b06133199f4bc0c0053e3819f4ec3b900dc399e1097b6065db998b5", size = 3654896, upload-time = "2026-02-06T09:57:45.402Z" },
+    { url = "https://files.pythonhosted.org/packages/be/b9/facb3430ee427c800bb1e39588c85685677ea649491d6e0874bd9f3a1c0e/grpcio_tools-1.78.0-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:f3d3ced52bfe39eba3d24f5a8fab4e12d071959384861b41f0c52ca5399d6920", size = 3322529, upload-time = "2026-02-06T09:57:47.292Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/de/d7a011df9abfed8c30f0d2077b0562a6e3edc57cb3e5514718e2a81f370a/grpcio_tools-1.78.0-cp310-cp310-win32.whl", hash = "sha256:4bb6ed690d417b821808796221bde079377dff98fdc850ac157ad2f26cda7a36", size = 993518, upload-time = "2026-02-06T09:57:48.836Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/5e/f7f60c3ae2281c6b438c3a8455f4a5d5d2e677cf20207864cbee3763da22/grpcio_tools-1.78.0-cp310-cp310-win_amd64.whl", hash = "sha256:0c676d8342fd53bd85a5d5f0d070cd785f93bc040510014708ede6fcb32fada1", size = 1158505, upload-time = "2026-02-06T09:57:50.633Z" },
+    { url = "https://files.pythonhosted.org/packages/75/78/280184d19242ed6762bf453c47a70b869b3c5c72a24dc5bf2bf43909faa3/grpcio_tools-1.78.0-cp311-cp311-linux_armv7l.whl", hash = "sha256:6a8b8b7b49f319d29dbcf507f62984fa382d1d10437d75c3f26db5f09c4ac0af", size = 2545904, upload-time = "2026-02-06T09:57:52.769Z" },
+    { url = "https://files.pythonhosted.org/packages/5b/51/3c46dea5113f68fe879961cae62d34bb7a3c308a774301b45d614952ee98/grpcio_tools-1.78.0-cp311-cp311-macosx_11_0_universal2.whl", hash = "sha256:d62cf3b68372b0c6d722a6165db41b976869811abeabc19c8522182978d8db10", size = 5709078, upload-time = "2026-02-06T09:57:56.389Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/2c/dc1ae9ec53182c96d56dfcbf3bcd3e55a8952ad508b188c75bf5fc8993d4/grpcio_tools-1.78.0-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:fa9056742efeaf89d5fe14198af71e5cbc4fbf155d547b89507e19d6025906c6", size = 2591744, upload-time = "2026-02-06T09:57:58.341Z" },
+    { url = "https://files.pythonhosted.org/packages/04/63/9b53fc9a9151dd24386785171a4191ee7cb5afb4d983b6a6a87408f41b28/grpcio_tools-1.78.0-cp311-cp311-manylinux2014_i686.manylinux_2_17_i686.whl", hash = "sha256:e3191af125dcb705aa6bc3856ba81ba99b94121c1b6ebee152e66ea084672831", size = 2905113, upload-time = "2026-02-06T09:58:00.38Z" },
+    { url = "https://files.pythonhosted.org/packages/96/b2/0ad8d789f3a2a00893131c140865605fa91671a6e6fcf9da659e1fabba10/grpcio_tools-1.78.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:283239ddbb67ae83fac111c61b25d8527a1dbd355b377cbc8383b79f1329944d", size = 2656436, upload-time = "2026-02-06T09:58:03.038Z" },
+    { url = "https://files.pythonhosted.org/packages/09/4d/580f47ce2fc61b093ade747b378595f51b4f59972dd39949f7444b464a03/grpcio_tools-1.78.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:ac977508c0db15301ef36d6c79769ec1a6cc4e3bc75735afca7fe7e360cead3a", size = 3106128, upload-time = "2026-02-06T09:58:05.064Z" },
+    { url = "https://files.pythonhosted.org/packages/c9/29/d83b2d89f8d10e438bad36b1eb29356510fb97e81e6a608b22ae1890e8e6/grpcio_tools-1.78.0-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:4ff605e25652a0bd13aa8a73a09bc48669c68170902f5d2bf1468a57d5e78771", size = 3654953, upload-time = "2026-02-06T09:58:07.15Z" },
+    { url = "https://files.pythonhosted.org/packages/08/71/917ce85633311e54fefd7e6eb1224fb780ef317a4d092766f5630c3fc419/grpcio_tools-1.78.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:0197d7b561c79be78ab93d0fe2836c8def470683df594bae3ac89dd8e5c821b2", size = 3322630, upload-time = "2026-02-06T09:58:10.305Z" },
+    { url = "https://files.pythonhosted.org/packages/b2/55/3fbf6b26ab46fc79e1e6f7f4e0993cf540263dad639290299fad374a0829/grpcio_tools-1.78.0-cp311-cp311-win32.whl", hash = "sha256:28f71f591f7f39555863ced84fcc209cbf4454e85ef957232f43271ee99af577", size = 993804, upload-time = "2026-02-06T09:58:13.698Z" },
+    { url = "https://files.pythonhosted.org/packages/73/86/4affe006d9e1e9e1c6653d6aafe2f8b9188acb2b563cd8ed3a2c7c0e8aec/grpcio_tools-1.78.0-cp311-cp311-win_amd64.whl", hash = "sha256:5a6de495dabf86a3b40b9a7492994e1232b077af9d63080811838b781abbe4e8", size = 1158566, upload-time = "2026-02-06T09:58:15.721Z" },
+    { url = "https://files.pythonhosted.org/packages/0c/ae/5b1fa5dd8d560a6925aa52de0de8731d319f121c276e35b9b2af7cc220a2/grpcio_tools-1.78.0-cp312-cp312-linux_armv7l.whl", hash = "sha256:9eb122da57d4cad7d339fc75483116f0113af99e8d2c67f3ef9cae7501d806e4", size = 2546823, upload-time = "2026-02-06T09:58:17.944Z" },
+    { url = "https://files.pythonhosted.org/packages/a7/ed/d33ccf7fa701512efea7e7e23333b748848a123e9d3bbafde4e126784546/grpcio_tools-1.78.0-cp312-cp312-macosx_11_0_universal2.whl", hash = "sha256:d0c501b8249940b886420e6935045c44cb818fa6f265f4c2b97d5cff9cb5e796", size = 5706776, upload-time = "2026-02-06T09:58:20.944Z" },
+    { url = "https://files.pythonhosted.org/packages/c6/69/4285583f40b37af28277fc6b867d636e3b10e1b6a7ebd29391a856e1279b/grpcio_tools-1.78.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:77e5aa2d2a7268d55b1b113f958264681ef1994c970f69d48db7d4683d040f57", size = 2593972, upload-time = "2026-02-06T09:58:23.29Z" },
+    { url = "https://files.pythonhosted.org/packages/d7/eb/ecc1885bd6b3147f0a1b7dff5565cab72f01c8f8aa458f682a1c77a9fb08/grpcio_tools-1.78.0-cp312-cp312-manylinux2014_i686.manylinux_2_17_i686.whl", hash = "sha256:8e3c0b0e6ba5275322ba29a97bf890565a55f129f99a21b121145e9e93a22525", size = 2905531, upload-time = "2026-02-06T09:58:25.406Z" },
+    { url = "https://files.pythonhosted.org/packages/ae/a9/511d0040ced66960ca10ba0f082d6b2d2ee6dd61837b1709636fdd8e23b4/grpcio_tools-1.78.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:975d4cb48694e20ebd78e1643e5f1cd94cdb6a3d38e677a8e84ae43665aa4790", size = 2656909, upload-time = "2026-02-06T09:58:28.022Z" },
+    { url = "https://files.pythonhosted.org/packages/06/a3/3d2c707e7dee8df842c96fbb24feb2747e506e39f4a81b661def7fed107c/grpcio_tools-1.78.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:553ff18c5d52807dedecf25045ae70bad7a3dbba0b27a9a3cdd9bcf0a1b7baec", size = 3109778, upload-time = "2026-02-06T09:58:30.091Z" },
+    { url = "https://files.pythonhosted.org/packages/1f/4b/646811ba241bf05da1f0dc6f25764f1c837f78f75b4485a4210c84b79eae/grpcio_tools-1.78.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:8c7f5e4af5a84d2e96c862b1a65e958a538237e268d5f8203a3a784340975b51", size = 3658763, upload-time = "2026-02-06T09:58:32.875Z" },
+    { url = "https://files.pythonhosted.org/packages/45/de/0a5ef3b3e79d1011375f5580dfee3a9c1ccb96c5f5d1c74c8cee777a2483/grpcio_tools-1.78.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:96183e2b44afc3f9a761e9d0f985c3b44e03e8bb98e626241a6cbfb3b6f7e88f", size = 3325116, upload-time = "2026-02-06T09:58:34.894Z" },
+    { url = "https://files.pythonhosted.org/packages/95/d2/6391b241ad571bc3e71d63f957c0b1860f0c47932d03c7f300028880f9b8/grpcio_tools-1.78.0-cp312-cp312-win32.whl", hash = "sha256:2250e8424c565a88573f7dc10659a0b92802e68c2a1d57e41872c9b88ccea7a6", size = 993493, upload-time = "2026-02-06T09:58:37.242Z" },
+    { url = "https://files.pythonhosted.org/packages/7c/8f/7d0d3a39ecad76ccc136be28274daa660569b244fa7d7d0bbb24d68e5ece/grpcio_tools-1.78.0-cp312-cp312-win_amd64.whl", hash = "sha256:217d1fa29de14d9c567d616ead7cb0fef33cde36010edff5a9390b00d52e5094", size = 1158423, upload-time = "2026-02-06T09:58:40.072Z" },
+    { url = "https://files.pythonhosted.org/packages/53/ce/17311fb77530420e2f441e916b347515133e83d21cd6cc77be04ce093d5b/grpcio_tools-1.78.0-cp313-cp313-linux_armv7l.whl", hash = "sha256:2d6de1cc23bdc1baafc23e201b1e48c617b8c1418b4d8e34cebf72141676e5fb", size = 2546284, upload-time = "2026-02-06T09:58:43.073Z" },
+    { url = "https://files.pythonhosted.org/packages/1d/d3/79e101483115f0e78223397daef71751b75eba7e92a32060c10aae11ca64/grpcio_tools-1.78.0-cp313-cp313-macosx_11_0_universal2.whl", hash = "sha256:2afeaad88040894c76656202ff832cb151bceb05c0e6907e539d129188b1e456", size = 5705653, upload-time = "2026-02-06T09:58:45.533Z" },
+    { url = "https://files.pythonhosted.org/packages/8b/a7/52fa3ccb39ceeee6adc010056eadfbca8198651c113e418dafebbdf2b306/grpcio_tools-1.78.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:33cc593735c93c03d63efe7a8ba25f3c66f16c52f0651910712490244facad72", size = 2592788, upload-time = "2026-02-06T09:58:48.918Z" },
+    { url = "https://files.pythonhosted.org/packages/68/08/682ff6bb548225513d73dc9403742d8975439d7469c673bc534b9bbc83a7/grpcio_tools-1.78.0-cp313-cp313-manylinux2014_i686.manylinux_2_17_i686.whl", hash = "sha256:2921d7989c4d83b71f03130ab415fa4d66e6693b8b8a1fcbb7a1c67cff19b812", size = 2905157, upload-time = "2026-02-06T09:58:51.478Z" },
+    { url = "https://files.pythonhosted.org/packages/b2/66/264f3836a96423b7018e5ada79d62576a6401f6da4e1f4975b18b2be1265/grpcio_tools-1.78.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:e6a0df438e82c804c7b95e3f311c97c2f876dcc36376488d5b736b7bcf5a9b45", size = 2656166, upload-time = "2026-02-06T09:58:54.117Z" },
+    { url = "https://files.pythonhosted.org/packages/f3/6b/f108276611522e03e98386b668cc7e575eff6952f2db9caa15b2a3b3e883/grpcio_tools-1.78.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:e9c6070a9500798225191ef25d0055a15d2c01c9c8f2ee7b681fffa99c98c822", size = 3109110, upload-time = "2026-02-06T09:58:56.891Z" },
+    { url = "https://files.pythonhosted.org/packages/6f/c7/cf048dbcd64b3396b3c860a2ffbcc67a8f8c87e736aaa74c2e505a7eee4c/grpcio_tools-1.78.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:394e8b57d85370a62e5b0a4d64c96fcf7568345c345d8590c821814d227ecf1d", size = 3657863, upload-time = "2026-02-06T09:58:59.176Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/37/e2736912c8fda57e2e57a66ea5e0bc8eb9a5fb7ded00e866ad22d50afb08/grpcio_tools-1.78.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:a3ef700293ab375e111a2909d87434ed0a0b086adf0ce67a8d9cf12ea7765e63", size = 3324748, upload-time = "2026-02-06T09:59:01.242Z" },
+    { url = "https://files.pythonhosted.org/packages/1c/5d/726abc75bb5bfc2841e88ea05896e42f51ca7c30cb56da5c5b63058b3867/grpcio_tools-1.78.0-cp313-cp313-win32.whl", hash = "sha256:6993b960fec43a8d840ee5dc20247ef206c1a19587ea49fe5e6cc3d2a09c1585", size = 993074, upload-time = "2026-02-06T09:59:03.085Z" },
+    { url = "https://files.pythonhosted.org/packages/c5/68/91b400bb360faf9b177ffb5540ec1c4d06ca923691ddf0f79e2c9683f4da/grpcio_tools-1.78.0-cp313-cp313-win_amd64.whl", hash = "sha256:275ce3c2978842a8cf9dd88dce954e836e590cf7029649ad5d1145b779039ed5", size = 1158185, upload-time = "2026-02-06T09:59:05.036Z" },
+    { url = "https://files.pythonhosted.org/packages/cf/5e/278f3831c8d56bae02e3acc570465648eccf0a6bbedcb1733789ac966803/grpcio_tools-1.78.0-cp314-cp314-linux_armv7l.whl", hash = "sha256:8b080d0d072e6032708a3a91731b808074d7ab02ca8fb9847b6a011fdce64cd9", size = 2546270, upload-time = "2026-02-06T09:59:07.426Z" },
+    { url = "https://files.pythonhosted.org/packages/a3/d9/68582f2952b914b60dddc18a2e3f9c6f09af9372b6f6120d6cf3ec7f8b4e/grpcio_tools-1.78.0-cp314-cp314-macosx_11_0_universal2.whl", hash = "sha256:8c0ad8f8f133145cd7008b49cb611a5c6a9d89ab276c28afa17050516e801f79", size = 5705731, upload-time = "2026-02-06T09:59:09.856Z" },
+    { url = "https://files.pythonhosted.org/packages/70/68/feb0f9a48818ee1df1e8b644069379a1e6ef5447b9b347c24e96fd258e5d/grpcio_tools-1.78.0-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:2f8ea092a7de74c6359335d36f0674d939a3c7e1a550f4c2c9e80e0226de8fe4", size = 2593896, upload-time = "2026-02-06T09:59:12.23Z" },
+    { url = "https://files.pythonhosted.org/packages/1f/08/a430d8d06e1b8d33f3e48d3f0cc28236723af2f35e37bd5c8db05df6c3aa/grpcio_tools-1.78.0-cp314-cp314-manylinux2014_i686.manylinux_2_17_i686.whl", hash = "sha256:da422985e0cac822b41822f43429c19ecb27c81ffe3126d0b74e77edec452608", size = 2905298, upload-time = "2026-02-06T09:59:14.458Z" },
+    { url = "https://files.pythonhosted.org/packages/71/0a/348c36a3eae101ca0c090c9c3bc96f2179adf59ee0c9262d11cdc7bfe7db/grpcio_tools-1.78.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:4fab1faa3fbcb246263e68da7a8177d73772283f9db063fb8008517480888d26", size = 2656186, upload-time = "2026-02-06T09:59:16.949Z" },
+    { url = "https://files.pythonhosted.org/packages/1d/3f/18219f331536fad4af6207ade04142292faa77b5cb4f4463787988963df8/grpcio_tools-1.78.0-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:dd9c094f73f734becae3f20f27d4944d3cd8fb68db7338ee6c58e62fc5c3d99f", size = 3109859, upload-time = "2026-02-06T09:59:19.202Z" },
+    { url = "https://files.pythonhosted.org/packages/5b/d9/341ea20a44c8e5a3a18acc820b65014c2e3ea5b4f32a53d14864bcd236bc/grpcio_tools-1.78.0-cp314-cp314-musllinux_1_2_i686.whl", hash = "sha256:2ed51ce6b833068f6c580b73193fc2ec16468e6bc18354bc2f83a58721195a58", size = 3657915, upload-time = "2026-02-06T09:59:21.839Z" },
+    { url = "https://files.pythonhosted.org/packages/fb/f4/5978b0f91611a64371424c109dd0027b247e5b39260abad2eaee66b6aa37/grpcio_tools-1.78.0-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:05803a5cdafe77c8bdf36aa660ad7a6a1d9e49bc59ce45c1bade2a4698826599", size = 3324724, upload-time = "2026-02-06T09:59:24.402Z" },
+    { url = "https://files.pythonhosted.org/packages/b2/80/96a324dba99cfbd20e291baf0b0ae719dbb62b76178c5ce6c788e7331cb1/grpcio_tools-1.78.0-cp314-cp314-win32.whl", hash = "sha256:f7c722e9ce6f11149ac5bddd5056e70aaccfd8168e74e9d34d8b8b588c3f5c7c", size = 1015505, upload-time = "2026-02-06T09:59:26.3Z" },
+    { url = "https://files.pythonhosted.org/packages/3b/d1/909e6a05bfd44d46327dc4b8a78beb2bae4fb245ffab2772e350081aaf7e/grpcio_tools-1.78.0-cp314-cp314-win_amd64.whl", hash = "sha256:7d58ade518b546120ec8f0a8e006fc8076ae5df151250ebd7e82e9b5e152c229", size = 1190196, upload-time = "2026-02-06T09:59:28.359Z" },
 ]
 
 [[package]]
@@ -13726,15 +13808,14 @@ wheels = [
 
 [[package]]
 name = "joserfc"
-version = "1.5.0"
+version = "1.6.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ec/b4/d49b4ec64feb3332f9255a1deefd8b6ffcbe6c332c205fa86eb33cf48c3a/joserfc-1.5.0.tar.gz", hash = "sha256:4e88d757cf08ec1d370561a15dd6dda8452ad4e335066a9aeb1b426bffe91c56", size = 213086, upload-time = "2025-11-30T06:01:52.073Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ce/90/b8cc8635c4ce2e5e8104bf26ef147f6e599478f6329107283cdc53aae97f/joserfc-1.6.3.tar.gz", hash = "sha256:c00c2830db969b836cba197e830e738dd9dda0955f1794e55d3c636f17f5c9a6", size = 229090, upload-time = "2026-02-25T15:33:38.167Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/13/6a/71937d4760bf6f3beabc640cf18578683b5247845db5ee4dbd8c66898def/joserfc-1.5.0-py3-none-any.whl", hash = "sha256:eaaded4f4c6717a761baa41b4067307d0c246b9d5e38acd44e80a332f5ddaf24", size = 68388, upload-time = "2025-11-30T06:01:50.43Z" },
+    { url = "https://files.pythonhosted.org/packages/12/4f/124b3301067b752f44f292f0b9a74e837dd75ff863ee39500a082fc4c733/joserfc-1.6.3-py3-none-any.whl", hash = "sha256:6beab3635358cbc565cb94fb4c53d0557e6d10a15b933e2134939351590bda9a", size = 70465, upload-time = "2026-02-25T15:33:36.997Z" },
 ]
 
 [[package]]
@@ -13894,8 +13975,7 @@ name = "jwcrypto"
 version = "1.5.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e1/db/870e5d5fb311b0bcf049630b5ba3abca2d339fd5e13ba175b4c13b456d08/jwcrypto-1.5.6.tar.gz", hash = "sha256:771a87762a0c081ae6166958a954f80848820b2ab066937dc8b8379d65b1b039", size = 87168, upload-time = "2024-03-06T19:58:31.831Z" }
@@ -14976,8 +15056,7 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
     { name = "botocore" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "jinja2" },
     { name = "python-dateutil" },
     { name = "requests" },
@@ -15021,8 +15100,7 @@ name = "msal"
 version = "1.35.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pyjwt", extra = ["crypto"] },
     { name = "requests" },
 ]
@@ -15980,7 +16058,8 @@ version = "0.19.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "grpcio" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/16/e2/8a09dbdbfe51e30dfecb625a0f5c524a53bfa4b1fba168f73ac85621dba2/opensearch_protobufs-0.19.0-py3-none-any.whl", hash = "sha256:5137c9c2323cc7debb694754b820ca4cfb5fc8eb180c41ff125698c3ee11bfc2", size = 39778, upload-time = "2025-09-29T20:05:52.379Z" },
@@ -16096,7 +16175,8 @@ name = "opentelemetry-proto"
 version = "1.40.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/4c/77/dd38991db037fdfce45849491cb61de5ab000f49824a00230afb112a4392/opentelemetry_proto-1.40.0.tar.gz", hash = "sha256:03f639ca129ba513f5819810f5b1f42bcb371391405d99c168fe6937c62febcd", size = 45667, upload-time = "2026-03-04T14:17:31.194Z" }
 wheels = [
@@ -16167,8 +16247,7 @@ name = "oracledb"
 version = "3.4.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f7/02/70a872d1a4a739b4f7371ab8d3d5ed8c6e57e142e2503531aafcb220893c/oracledb-3.4.2.tar.gz", hash = "sha256:46e0f2278ff1fe83fbc33a3b93c72d429323ec7eed47bc9484e217776cd437e5", size = 855467, upload-time = "2026-01-28T17:25:39.91Z" }
@@ -16537,8 +16616,7 @@ version = "3.5.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "bcrypt" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pynacl" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/7d/15/ad6ce226e8138315f2451c2aeea985bf35ee910afb477bae7477dc3a8f3b/paramiko-3.5.1.tar.gz", hash = "sha256:b2c665bc45b2b215bd7d7f039901b14b067da00f3a11e6640995fd58f2664822", size = 1566110, upload-time = "2025-02-04T02:37:59.783Z" }
@@ -17065,7 +17143,8 @@ name = "proto-plus"
 version = "1.27.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/3a/02/8832cde80e7380c600fbf55090b6ab7b62bd6825dbedde6d6657c15a1f8e/proto_plus-1.27.1.tar.gz", hash = "sha256:912a7460446625b792f6448bade9e55cd4e41e6ac10e27009ef71a7f317fa147", size = 56929, upload-time = "2026-02-02T17:34:49.035Z" }
 wheels = [
@@ -17076,6 +17155,12 @@ wheels = [
 name = "protobuf"
 version = "5.29.6"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.13.*'",
+    "python_full_version == '3.12.*'",
+    "python_full_version == '3.11.*'",
+    "python_full_version < '3.11'",
+]
 sdist = { url = "https://files.pythonhosted.org/packages/7e/57/394a763c103e0edf87f0938dafcd918d53b4c011dfc5c8ae80f3b0452dbb/protobuf-5.29.6.tar.gz", hash = "sha256:da9ee6a5424b6b30fd5e45c5ea663aef540ca95f9ad99d1e887e819cdf9b8723", size = 425623, upload-time = "2026-02-04T22:54:40.584Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d4/88/9ee58ff7863c479d6f8346686d4636dd4c415b0cbeed7a6a7d0617639c2a/protobuf-5.29.6-cp310-abi3-win32.whl", hash = "sha256:62e8a3114992c7c647bce37dcc93647575fc52d50e48de30c6fcb28a6a291eb1", size = 423357, upload-time = "2026-02-04T22:54:25.805Z" },
@@ -17084,6 +17169,28 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/b7/d7/48cbf6b0c3c39761e47a99cb483405f0fde2be22cf00d71ef316ce52b458/protobuf-5.29.6-cp38-abi3-manylinux2014_aarch64.whl", hash = "sha256:a8866b2cff111f0f863c1b3b9e7572dc7eaea23a7fae27f6fc613304046483e6", size = 320284, upload-time = "2026-02-04T22:54:31.782Z" },
     { url = "https://files.pythonhosted.org/packages/e3/dd/cadd6ec43069247d91f6345fa7a0d2858bef6af366dbd7ba8f05d2c77d3b/protobuf-5.29.6-cp38-abi3-manylinux2014_x86_64.whl", hash = "sha256:e3387f44798ac1106af0233c04fb8abf543772ff241169946f698b3a9a3d3ab9", size = 320478, upload-time = "2026-02-04T22:54:32.909Z" },
     { url = "https://files.pythonhosted.org/packages/5a/cb/e3065b447186cb70aa65acc70c86baf482d82bf75625bf5a2c4f6919c6a3/protobuf-5.29.6-py3-none-any.whl", hash = "sha256:6b9edb641441b2da9fa8f428760fc136a49cf97a52076010cf22a2ff73438a86", size = 173126, upload-time = "2026-02-04T22:54:39.462Z" },
+]
+
+[[package]]
+name = "protobuf"
+version = "6.33.6"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.15' and sys_platform == 'win32'",
+    "python_full_version >= '3.15' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.15' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.14.*' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and sys_platform != 'linux'",
+]
+sdist = { url = "https://files.pythonhosted.org/packages/66/70/e908e9c5e52ef7c3a6c7902c9dfbb34c7e29c25d2f81ade3856445fd5c94/protobuf-6.33.6.tar.gz", hash = "sha256:a6768d25248312c297558af96a9f9c929e8c4cee0659cb07e780731095f38135", size = 444531, upload-time = "2026-03-18T19:05:00.988Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fc/9f/2f509339e89cfa6f6a4c4ff50438db9ca488dec341f7e454adad60150b00/protobuf-6.33.6-cp310-abi3-win32.whl", hash = "sha256:7d29d9b65f8afef196f8334e80d6bc1d5d4adedb449971fefd3723824e6e77d3", size = 425739, upload-time = "2026-03-18T19:04:48.373Z" },
+    { url = "https://files.pythonhosted.org/packages/76/5d/683efcd4798e0030c1bab27374fd13a89f7c2515fb1f3123efdfaa5eab57/protobuf-6.33.6-cp310-abi3-win_amd64.whl", hash = "sha256:0cd27b587afca21b7cfa59a74dcbd48a50f0a6400cfb59391340ad729d91d326", size = 437089, upload-time = "2026-03-18T19:04:50.381Z" },
+    { url = "https://files.pythonhosted.org/packages/5c/01/a3c3ed5cd186f39e7880f8303cc51385a198a81469d53d0fdecf1f64d929/protobuf-6.33.6-cp39-abi3-macosx_10_9_universal2.whl", hash = "sha256:9720e6961b251bde64edfdab7d500725a2af5280f3f4c87e57c0208376aa8c3a", size = 427737, upload-time = "2026-03-18T19:04:51.866Z" },
+    { url = "https://files.pythonhosted.org/packages/ee/90/b3c01fdec7d2f627b3a6884243ba328c1217ed2d978def5c12dc50d328a3/protobuf-6.33.6-cp39-abi3-manylinux2014_aarch64.whl", hash = "sha256:e2afbae9b8e1825e3529f88d514754e094278bb95eadc0e199751cdd9a2e82a2", size = 324610, upload-time = "2026-03-18T19:04:53.096Z" },
+    { url = "https://files.pythonhosted.org/packages/9b/ca/25afc144934014700c52e05103c2421997482d561f3101ff352e1292fb81/protobuf-6.33.6-cp39-abi3-manylinux2014_s390x.whl", hash = "sha256:c96c37eec15086b79762ed265d59ab204dabc53056e3443e702d2681f4b39ce3", size = 339381, upload-time = "2026-03-18T19:04:54.616Z" },
+    { url = "https://files.pythonhosted.org/packages/16/92/d1e32e3e0d894fe00b15ce28ad4944ab692713f2e7f0a99787405e43533a/protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl", hash = "sha256:e9db7e292e0ab79dd108d7f1a94fe31601ce1ee3f7b79e0692043423020b0593", size = 323436, upload-time = "2026-03-18T19:04:55.768Z" },
+    { url = "https://files.pythonhosted.org/packages/c4/72/02445137af02769918a93807b2b7890047c32bfb9f90371cbc12688819eb/protobuf-6.33.6-py3-none-any.whl", hash = "sha256:77179e006c476e69bf8e8ce866640091ec42e1beb80b213c3900006ecfba6901", size = 170656, upload-time = "2026-03-18T19:04:59.826Z" },
 ]
 
 [[package]]
@@ -17487,7 +17594,7 @@ wheels = [
 
 [[package]]
 name = "pydantic-ai-slim"
-version = "1.38.0"
+version = "1.56.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
@@ -17499,9 +17606,9 @@ dependencies = [
     { name = "pydantic-graph" },
     { name = "typing-inspection" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/41/cd/5fd5c3d47fa7b3e2042636f74ff5a8ba91f4afad3550b75141c578171d7d/pydantic_ai_slim-1.38.0.tar.gz", hash = "sha256:7d43d78a7be6f82a3a744f6ef8c571ac4b4901b15495b68ccc2e33fce1b2cf37", size = 353940, upload-time = "2025-12-23T01:29:24.905Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ce/5c/3a577825b9c1da8f287be7f2ee6fe9aab48bc8a80e65c8518052c589f51c/pydantic_ai_slim-1.56.0.tar.gz", hash = "sha256:9f9f9c56b1c735837880a515ae5661b465b40207b25f3a3434178098b2137f05", size = 415265, upload-time = "2026-02-06T01:13:23.58Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/99/6a/b615ae679fba01f3c906264661ec1d2e87a38e1aa0be7048c035f3a9e8cb/pydantic_ai_slim-1.38.0-py3-none-any.whl", hash = "sha256:5a74f1a2baec1ae0769515413ea38d9a5212cd5d3804bbd73579ff7390c3b658", size = 461883, upload-time = "2025-12-23T01:29:17.708Z" },
+    { url = "https://files.pythonhosted.org/packages/62/4b/34682036528eeb9aaf093c2073540ddf399ab37b99d282a69ca41356f1aa/pydantic_ai_slim-1.56.0-py3-none-any.whl", hash = "sha256:d657e4113485020500b23b7390b0066e2a0277edc7577eaad2290735ca5dd7d5", size = 542270, upload-time = "2026-02-06T01:13:14.918Z" },
 ]
 
 [package.optional-dependencies]
@@ -17519,6 +17626,7 @@ mcp = [
 ]
 openai = [
     { name = "openai" },
+    { name = "tiktoken" },
 ]
 
 [[package]]
@@ -17654,7 +17762,7 @@ wheels = [
 
 [[package]]
 name = "pydantic-graph"
-version = "1.38.0"
+version = "1.56.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
@@ -17662,9 +17770,9 @@ dependencies = [
     { name = "pydantic" },
     { name = "typing-inspection" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7a/bd/a910b5230cc76f0bfd881cb5ccb2a635bfe8b9203f12d4d20e3f43730d30/pydantic_graph-1.38.0.tar.gz", hash = "sha256:dc22d7e849731cbed10c6b1313d286108701d7ddf2ac777da883dc5b9c6f9a7a", size = 58455, upload-time = "2025-12-23T01:29:26.838Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ff/03/f92881cdb12d6f43e60e9bfd602e41c95408f06e2324d3729f7a194e2bcd/pydantic_graph-1.56.0.tar.gz", hash = "sha256:5e22972dbb43dbc379ab9944252ff864019abf3c7d465dcdf572fc8aec9a44a1", size = 58460, upload-time = "2026-02-06T01:13:26.708Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a6/b4/163f6e799261faa5e0cf04e91ab10bd261ad4a71937aeb8ce37bccf0828c/pydantic_graph-1.38.0-py3-none-any.whl", hash = "sha256:a054645ca3f7f37d39b2435101622505ec68d961a7f51761df3cf281dbf06566", size = 72328, upload-time = "2025-12-23T01:29:20.745Z" },
+    { url = "https://files.pythonhosted.org/packages/08/07/8c823eb4d196137c123d4d67434e185901d3cbaea3b0c2b7667da84e72c1/pydantic_graph-1.56.0-py3-none-any.whl", hash = "sha256:ec3f0a1d6fcedd4eb9c59fef45079c2ee4d4185878d70dae26440a9c974c6bb3", size = 72346, upload-time = "2026-02-06T01:13:18.792Z" },
 ]
 
 [[package]]
@@ -17859,8 +17967,7 @@ wheels = [
 
 [package.optional-dependencies]
 crypto = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
 ]
 
 [[package]]
@@ -18121,37 +18228,11 @@ wheels = [
 
 [[package]]
 name = "pyopenssl"
-version = "25.1.0"
-source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version >= '3.15' and sys_platform == 'win32'",
-    "python_full_version >= '3.15' and sys_platform == 'emscripten'",
-    "python_full_version >= '3.15' and sys_platform != 'emscripten' and sys_platform != 'win32'",
-    "python_full_version == '3.14.*' and sys_platform == 'linux'",
-    "python_full_version == '3.14.*' and sys_platform != 'linux'",
-    "python_full_version == '3.13.*'",
-    "python_full_version == '3.12.*'",
-]
-dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "typing-extensions", marker = "python_full_version == '3.12.*'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/04/8c/cd89ad05804f8e3c17dea8f178c3f40eeab5694c30e0c9f5bcd49f576fc3/pyopenssl-25.1.0.tar.gz", hash = "sha256:8d031884482e0c67ee92bf9a4d8cceb08d92aba7136432ffb0703c5280fc205b", size = 179937, upload-time = "2025-05-17T16:28:31.31Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/80/28/2659c02301b9500751f8d42f9a6632e1508aa5120de5e43042b8b30f8d5d/pyopenssl-25.1.0-py3-none-any.whl", hash = "sha256:2b11f239acc47ac2e5aca04fd7fa829800aeee22a2eb30d744572a157bd8a1ab", size = 56771, upload-time = "2025-05-17T16:28:29.197Z" },
-]
-
-[[package]]
-name = "pyopenssl"
 version = "25.3.0"
 source = { registry = "https://pypi.org/simple" }
-resolution-markers = [
-    "python_full_version == '3.11.*'",
-    "python_full_version < '3.11'",
-]
 dependencies = [
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
-    { name = "typing-extensions", marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
+    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/80/be/97b83a464498a79103036bc74d1038df4a7ef0e402cfaf4d5e113fb14759/pyopenssl-25.3.0.tar.gz", hash = "sha256:c981cb0a3fd84e8602d7afc209522773b94c1c2446a3c710a75b06fe1beae329", size = 184073, upload-time = "2025-09-17T00:32:21.037Z" }
 wheels = [
@@ -18181,8 +18262,7 @@ name = "pypsrp"
 version = "0.9.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pyspnego" },
     { name = "requests" },
 ]
@@ -18280,7 +18360,8 @@ source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "googleapis-common-protos" },
     { name = "grpcio" },
-    { name = "grpcio-status" },
+    { name = "grpcio-status", version = "1.71.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "grpcio-status", version = "1.78.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "numpy", version = "2.4.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "pandas" },
@@ -18293,8 +18374,7 @@ name = "pyspnego"
 version = "0.12.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "sspilib", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/7d/84/58577bd1b14293650879de0579ec263a1d8350f1d6d227226cf776b5a6a6/pyspnego-0.12.1.tar.gz", hash = "sha256:ff4fb6df38202a012ea2a0f43091ae9680878443f0ea61c9ea0e2e8152a4b810", size = 226027, upload-time = "2026-03-02T20:16:09.74Z" }
@@ -18890,7 +18970,8 @@ dependencies = [
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "numpy", version = "2.4.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "portalocker" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "pydantic" },
     { name = "urllib3" },
 ]
@@ -18919,7 +19000,8 @@ dependencies = [
     { name = "jsonschema", marker = "python_full_version != '3.14.*' or sys_platform != 'linux'" },
     { name = "msgpack", marker = "python_full_version != '3.14.*' or sys_platform != 'linux'" },
     { name = "packaging", marker = "python_full_version != '3.14.*' or sys_platform != 'linux'" },
-    { name = "protobuf", marker = "python_full_version != '3.14.*' or sys_platform != 'linux'" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.14' and sys_platform != 'linux') or (python_full_version >= '3.15' and sys_platform == 'linux')" },
     { name = "pyyaml", marker = "python_full_version != '3.14.*' or sys_platform != 'linux'" },
     { name = "requests", marker = "python_full_version != '3.14.*' or sys_platform != 'linux'" },
 ]
@@ -18972,7 +19054,7 @@ dependencies = [
     { name = "jsonschema", marker = "python_full_version == '3.14.*' and sys_platform == 'linux'" },
     { name = "msgpack", marker = "python_full_version == '3.14.*' and sys_platform == 'linux'" },
     { name = "packaging", marker = "python_full_version == '3.14.*' and sys_platform == 'linux'" },
-    { name = "protobuf", marker = "python_full_version == '3.14.*' and sys_platform == 'linux'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.14.*' and sys_platform == 'linux'" },
     { name = "pyyaml", marker = "python_full_version == '3.14.*' and sys_platform == 'linux'" },
     { name = "requests", marker = "python_full_version == '3.14.*' and sys_platform == 'linux'" },
 ]
@@ -19450,7 +19532,7 @@ wheels = [
 
 [[package]]
 name = "requests"
-version = "2.32.5"
+version = "2.33.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi" },
@@ -19458,9 +19540,9 @@ dependencies = [
     { name = "idna" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz", hash = "sha256:dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf", size = 134517, upload-time = "2025-08-18T20:46:02.573Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz", hash = "sha256:c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652", size = 134232, upload-time = "2026-03-25T15:10:41.586Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl", hash = "sha256:2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6", size = 64738, upload-time = "2025-08-18T20:46:00.542Z" },
+    { url = "https://files.pythonhosted.org/packages/56/5d/c814546c2333ceea4ba42262d8c4d55763003e767fa169adc693bd524478/requests-2.33.0-py3-none-any.whl", hash = "sha256:3324635456fa185245e24865e810cecec7b4caf933d7eb133dcde67d48cee69b", size = 65017, upload-time = "2026-03-25T15:10:40.382Z" },
 ]
 
 [[package]]
@@ -19480,8 +19562,7 @@ name = "requests-kerberos"
 version = "0.15.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pyspnego", extra = ["kerberos"] },
     { name = "requests" },
 ]
@@ -19507,8 +19588,7 @@ name = "requests-ntlm"
 version = "1.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pyspnego" },
     { name = "requests" },
 ]
@@ -19837,28 +19917,28 @@ wheels = [
 
 [[package]]
 name = "s3fs"
-version = "2025.12.0"
+version = "2026.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiobotocore" },
     { name = "aiohttp" },
     { name = "fsspec" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/cf/26/fff848df6a76d6fec20208e61548244639c46a741e296244c3404d6e7df0/s3fs-2025.12.0.tar.gz", hash = "sha256:8612885105ce14d609c5b807553f9f9956b45541576a17ff337d9435ed3eb01f", size = 81217, upload-time = "2025-12-03T15:34:04.754Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/be/392c8c5e0da9bfa139e41084690dd49a5e3e931099f78f52d3f6070105c6/s3fs-2026.2.0.tar.gz", hash = "sha256:91cb2a9f76e35643b76eeac3f47a6165172bb3def671f76b9111c8dd5779a2ac", size = 84152, upload-time = "2026-02-05T21:57:57.968Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/44/8c/04797ebb53748b4d594d4c334b2d9a99f2d2e06e19ad505f1313ca5d56eb/s3fs-2025.12.0-py3-none-any.whl", hash = "sha256:89d51e0744256baad7ae5410304a368ca195affd93a07795bc8ba9c00c9effbb", size = 30726, upload-time = "2025-12-03T15:34:03.576Z" },
+    { url = "https://files.pythonhosted.org/packages/57/e1/64c264db50b68de8a438b60ceeb921b2f22da3ebb7ad6255150225d0beac/s3fs-2026.2.0-py3-none-any.whl", hash = "sha256:65198835b86b1d5771112b0085d1da52a6ede36508b1aaa6cae2aedc765dfe10", size = 31328, upload-time = "2026-02-05T21:57:56.532Z" },
 ]
 
 [[package]]
 name = "s3transfer"
-version = "0.15.0"
+version = "0.16.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "botocore" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ca/bb/940d6af975948c1cc18f44545ffb219d3c35d78ec972b42ae229e8e37e08/s3transfer-0.15.0.tar.gz", hash = "sha256:d36fac8d0e3603eff9b5bfa4282c7ce6feb0301a633566153cbd0b93d11d8379", size = 152185, upload-time = "2025-11-20T20:28:56.327Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/05/04/74127fc843314818edfa81b5540e26dd537353b123a4edc563109d8f17dd/s3transfer-0.16.0.tar.gz", hash = "sha256:8e990f13268025792229cd52fa10cb7163744bf56e719e0b9cb925ab79abf920", size = 153827, upload-time = "2025-12-01T02:30:59.114Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5f/e1/5ef25f52973aa12a19cf4e1375d00932d7fb354ffd310487ba7d44225c1a/s3transfer-0.15.0-py3-none-any.whl", hash = "sha256:6f8bf5caa31a0865c4081186689db1b2534cef721d104eb26101de4b9d6a5852", size = 85984, upload-time = "2025-11-20T20:28:55.046Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/51/727abb13f44c1fcf6d145979e1535a35794db0f6e450a0cb46aa24732fe2/s3transfer-0.16.0-py3-none-any.whl", hash = "sha256:18e25d66fed509e3868dc1572b3f427ff947dd2c56f844a5bf09481ad3f3b2fe", size = 86830, upload-time = "2025-12-01T02:30:57.729Z" },
 ]
 
 [[package]]
@@ -20157,9 +20237,8 @@ name = "secretstorage"
 version = "3.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.12' and python_full_version < '3.14') or (python_full_version >= '3.15' and sys_platform != 'linux') or (python_full_version >= '3.12' and sys_platform == 'linux')" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
-    { name = "jeepney", marker = "python_full_version != '3.14.*' or sys_platform == 'linux'" },
+    { name = "cryptography", marker = "(python_full_version < '3.14' and sys_platform == 'emscripten') or (python_full_version < '3.14' and sys_platform == 'win32') or (python_full_version != '3.14.*' and sys_platform != 'emscripten' and sys_platform != 'win32') or sys_platform == 'linux'" },
+    { name = "jeepney", marker = "(python_full_version < '3.14' and sys_platform == 'emscripten') or (python_full_version < '3.14' and sys_platform == 'win32') or (python_full_version != '3.14.*' and sys_platform != 'emscripten' and sys_platform != 'win32') or sys_platform == 'linux'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1c/03/e834bcd866f2f8a49a85eaff47340affa3bfa391ee9912a952a1faa68c7b/secretstorage-3.5.0.tar.gz", hash = "sha256:f04b8e4689cbce351744d5537bf6b1329c6fc68f91fa666f60a380edddcd11be", size = 19884, upload-time = "2025-11-23T19:02:53.191Z" }
 wheels = [
@@ -20222,7 +20301,7 @@ resolution-markers = [
     "python_full_version < '3.11'",
 ]
 dependencies = [
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography", marker = "python_full_version < '3.12'" },
     { name = "python-http-client", marker = "python_full_version < '3.12'" },
     { name = "werkzeug", marker = "python_full_version < '3.12'" },
 ]
@@ -20397,8 +20476,7 @@ name = "smbprotocol"
 version = "1.16.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "pyspnego" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c0/5e/1eb2adb1e4739e8a1571f4a641850569ed65d72f72e3d3fd4b121e424795/smbprotocol-1.16.0.tar.gz", hash = "sha256:babeb6fa825ba57939f9637c49a34548ddca348386d34de0796d1f87882c0bda", size = 185253, upload-time = "2026-02-09T00:56:45.163Z" }
@@ -20443,15 +20521,13 @@ dependencies = [
     { name = "botocore" },
     { name = "certifi" },
     { name = "charset-normalizer" },
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "filelock" },
     { name = "idna" },
     { name = "packaging" },
     { name = "platformdirs" },
     { name = "pyjwt" },
-    { name = "pyopenssl", version = "25.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "pyopenssl", version = "25.3.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "pyopenssl" },
     { name = "pytz" },
     { name = "requests" },
     { name = "sortedcontainers" },
@@ -20488,7 +20564,7 @@ version = "1.47.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cloudpickle", version = "3.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
-    { name = "protobuf", marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
     { name = "python-dateutil", marker = "python_full_version < '3.14'" },
     { name = "pyyaml", marker = "python_full_version < '3.14'" },
     { name = "setuptools", marker = "python_full_version < '3.14'" },
@@ -21847,8 +21923,7 @@ name = "types-paramiko"
 version = "3.5.0.20250801"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/d5/c4/4df427c835e9c795662241410732ab936c6f58be798ec25ce7015771c448/types_paramiko-3.5.0.20250801.tar.gz", hash = "sha256:e79ff84eaf44f2a5ad811743edef5d9c0cd6632a264a526f00405b87db1ec99b", size = 28838, upload-time = "2025-08-01T03:48:52.777Z" }
 wheels = [
@@ -21878,8 +21953,7 @@ name = "types-pyopenssl"
 version = "24.1.0.20240722"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "types-cffi" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/93/29/47a346550fd2020dac9a7a6d033ea03fccb92fa47c726056618cc889745e/types-pyOpenSSL-24.1.0.20240722.tar.gz", hash = "sha256:47913b4678a01d879f503a12044468221ed8576263c1540dcb0484ca21b08c39", size = 8458, upload-time = "2024-07-22T02:32:22.558Z" }
@@ -21928,8 +22002,7 @@ name = "types-redis"
 version = "4.6.0.20241004"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
+    { name = "cryptography" },
     { name = "types-pyopenssl" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/3a/95/c054d3ac940e8bac4ca216470c80c26688a0e79e09f520a942bb27da3386/types-redis-4.6.0.20241004.tar.gz", hash = "sha256:5f17d2b3f9091ab75384153bfa276619ffa1cf6a38da60e10d5e6749cc5b902e", size = 49679, upload-time = "2024-10-04T02:43:59.224Z" }
@@ -22367,7 +22440,8 @@ dependencies = [
     { name = "deprecation" },
     { name = "grpcio" },
     { name = "httpx" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "pydantic" },
     { name = "validators" },
 ]
@@ -22696,21 +22770,53 @@ wheels = [
 name = "yandexcloud"
 version = "0.382.0"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.13.*'",
+    "python_full_version == '3.12.*'",
+    "python_full_version == '3.11.*'",
+    "python_full_version < '3.11'",
+]
 dependencies = [
-    { name = "cryptography", version = "44.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "cryptography", version = "46.0.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
-    { name = "deprecated" },
-    { name = "googleapis-common-protos" },
-    { name = "grpcio" },
-    { name = "grpcio-tools" },
-    { name = "protobuf" },
-    { name = "pyjwt" },
-    { name = "requests" },
-    { name = "six" },
+    { name = "cryptography", marker = "python_full_version < '3.14'" },
+    { name = "deprecated", marker = "python_full_version < '3.14'" },
+    { name = "googleapis-common-protos", marker = "python_full_version < '3.14'" },
+    { name = "grpcio", marker = "python_full_version < '3.14'" },
+    { name = "grpcio-tools", version = "1.71.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "pyjwt", marker = "python_full_version < '3.14'" },
+    { name = "requests", marker = "python_full_version < '3.14'" },
+    { name = "six", marker = "python_full_version < '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/21/04/c002dc1002f3c0350da7ac124ee9b710b5c97ef7e559f3c5989a99343074/yandexcloud-0.382.0.tar.gz", hash = "sha256:cd3df40e0db8daf7f39c7e2bddb54f250f757a187d6c2b32e9fef3c39c9dd571", size = 3824164, upload-time = "2026-03-16T15:28:40.777Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/44/be/65b6b821550250b76b2b28e5724c63dd8a954affeceb3597a6baa86e56a7/yandexcloud-0.382.0-py3-none-any.whl", hash = "sha256:761862158c2cd51d4b241125e1773af7aefbeee690e9c645d15aefcd5dbacad0", size = 5848428, upload-time = "2026-03-16T15:28:38.909Z" },
+]
+
+[[package]]
+name = "yandexcloud"
+version = "0.383.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.15' and sys_platform == 'win32'",
+    "python_full_version >= '3.15' and sys_platform == 'emscripten'",
+    "python_full_version >= '3.15' and sys_platform != 'emscripten' and sys_platform != 'win32'",
+    "python_full_version == '3.14.*' and sys_platform == 'linux'",
+    "python_full_version == '3.14.*' and sys_platform != 'linux'",
+]
+dependencies = [
+    { name = "cryptography", marker = "python_full_version >= '3.14'" },
+    { name = "deprecated", marker = "python_full_version >= '3.14'" },
+    { name = "googleapis-common-protos", marker = "python_full_version >= '3.14'" },
+    { name = "grpcio", marker = "python_full_version >= '3.14'" },
+    { name = "grpcio-tools", version = "1.78.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
+    { name = "pyjwt", marker = "python_full_version >= '3.14'" },
+    { name = "requests", marker = "python_full_version >= '3.14'" },
+    { name = "six", marker = "python_full_version >= '3.14'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7d/73/be4bba1f603cb28db4fea54e1c89733e3e22ced72172bff9fb95abc4238a/yandexcloud-0.383.0.tar.gz", hash = "sha256:78a52789bf333f9664204024b625e47009ce72def727029a7c9e919016866d45", size = 3825141, upload-time = "2026-03-23T15:27:24.262Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5e/1d/914528598414ad54c5a22a8d22ec0095ee16174bb3ddf981d66396745bba/yandexcloud-0.383.0-py3-none-any.whl", hash = "sha256:174c7652751db01fc48f100f846915c508c18696dd3e6ed190a3bb5554c21a0f", size = 5849511, upload-time = "2026-03-23T15:27:22.068Z" },
 ]
 
 [[package]]
@@ -22861,7 +22967,8 @@ dependencies = [
     { name = "aiohttp" },
     { name = "grpcio" },
     { name = "packaging" },
-    { name = "protobuf" },
+    { name = "protobuf", version = "5.29.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
+    { name = "protobuf", version = "6.33.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/7e/70/9754589a2901058ff1219eff4e274bd6c9471fac6fea5ac0f66c7b2b4dfb/ydb-3.26.7.tar.gz", hash = "sha256:2e4fc1e7be9e225ea7bd7f5a97abbce648c3d89a16d549ad21ddef16e3f00dfd", size = 984686, upload-time = "2026-03-18T16:57:53.245Z" }
 wheels = [
